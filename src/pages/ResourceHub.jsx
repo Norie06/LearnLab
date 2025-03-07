@@ -1,4 +1,4 @@
-function ResearchHub() {
+function ResourceHub() {
   return (
     <div>
       <h1>Research Hub</h1>
@@ -6,4 +6,4 @@ function ResearchHub() {
   );
 }
 
-export default ResearchHub;
+export default ResourceHub;

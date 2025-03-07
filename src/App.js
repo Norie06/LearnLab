@@ -12,38 +12,34 @@ import SignIn from './pages/SignIn';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/community">Community</Link>
-              </li>
-              <li>
-                <Link to="/profile">Profile</Link>
-              </li>
-              <li>
-                <Link to="/quizzes">Quizzes</Link>
-              </li>
-              <li>
-                <Link to="/resource-hub">Resource Hub</Link>
-              </li>
-              <li>
-                <Link to="/sign-up">Sign Up</Link>
-              </li>
-              <li>
-                <Link to="/sign-in">Sign In</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/community">Community</Link>
+          </li>
+          <li>
+            <Link to="/profile">Profile</Link>
+          </li>
+          <li>
+            <Link to="/quizzes">Quizzes</Link>
+          </li>
+          <li>
+            <Link to="/resource-hub">Resource Hub</Link>
+          </li>
+          <li>
+            <Link to="/sign-up">Sign Up</Link>
+          </li>
+          <li>
+            <Link to="/sign-in">Sign In</Link>
+          </li>
+        </ul>
+      </nav>
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -56,6 +52,11 @@ function App() {
           <Route path="/sign-in" element={<SignIn />} />
         </Routes>
       </div>
+      <main>
+      </main>
+      <footer>
+        <p>Footer</p>
+      </footer>
     </div>
   );
 }
