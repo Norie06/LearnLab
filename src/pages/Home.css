@@ -1,0 +1,81 @@
+#home_hero {
+    background-color: lightblue; /* Example style */
+    padding: 20px;
+    text-align: center;
+}
+
+#home_hero_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 27%;
+    margin-right: 27%;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+#home_hero_content p {
+    margin: 0; /* Remove top and bottom margin */
+    padding: 0; /* Remove padding */
+    font-size: 0.7em;
+    text-align: center;
+}
+
+#home_hero_content h1 {
+    margin: 0; /* Remove top and bottom margin */
+    padding: 0; /* Remove padding */
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.Horizontal-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#features_title {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #282c34;
+  font-size: 1em;
+  margin: 20px;
+}
+
+#features_title h2 {
+  margin-bottom: 5px; /* Adjust as needed */
+}
+
+#features_title p {
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+#features {
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+#features_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px;
+  gap: 5px;
+}
+
+#begin_journey {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  width: 20%;
+}

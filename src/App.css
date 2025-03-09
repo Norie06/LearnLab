@@ -55,6 +55,35 @@ nav ul li a {
   text-decoration: none;
 }
 
+h2  {
+  color: #282c34;
+  font-size: 1.5em;
+}
+
+#features_title {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #282c34;
+  font-size: 1em;
+  margin: 30px;
+}
+
+#features_title h2 {
+  margin-bottom: 5px; /* Adjust as needed */
+}
+
+#features_title p {
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+#features_list {
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px;
+}
+
 footer {
   background-color: white;
   color: black;
