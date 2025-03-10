@@ -1,0 +1,21 @@
+.quiz-item {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #282c34;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 1em;
+    width: 50%;
+    align-self: center;
+}
+
+Link {
+    text-decoration: none;
+    color: white;
+}

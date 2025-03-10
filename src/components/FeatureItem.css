@@ -14,5 +14,8 @@
 
 .feature-item p {
   text-align: justify;
-  padding-right: 20%;
+  padding-right: 15%;
+  font-size: 1em;
+  hyphens: auto;
+  word-break: break-word;
 }

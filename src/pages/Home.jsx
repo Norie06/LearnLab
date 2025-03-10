@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import FeatureItem from '../components/FeatureItem.jsx';
+import ChooseQuizItem from '../components/ChooseQuizItem.jsx';
 import './Home.css'; // Import the CSS file for Home component
+import NoteTaking from './NoteTaking.jsx';
+import LearningStyles from './LearningStyles.jsx';
 
 function Home() {
   const [intro, setIntro] = useState('');
@@ -51,6 +54,20 @@ function Home() {
         <div id='begin_journey'>
           <p>This is where your studying journey begins!</p>
           <img src="" alt="arrows down" />
+        </div>
+        <div id='choose_quiz'>
+          <ul>
+            <li>
+              <ChooseQuizItem title="Learning Styles Quiz" image="" icon="" path="/note-taking" element={<NoteTaking />} />
+            </li>
+            <li>
+              <p>Are you a visual learner or do you prefer hearing someone</p>
+              <p>...</p>
+            </li>
+            <li>
+              <ChooseQuizItem title="Note-taking Techniques Quiz" image="" icon="" path="/learning-styles" element={<LearningStyles />} />
+            </li>
+          </ul>
         </div>
         <ul>
           <li>

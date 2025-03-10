@@ -8,6 +8,8 @@ import Quizzes from './pages/Quizzes';
 import ResourceHub from './pages/ResourceHub';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import LearningStyles from './pages/LearningStyles';
+import NoteTaking from './pages/NoteTaking';
 
 function App() {
   return (
