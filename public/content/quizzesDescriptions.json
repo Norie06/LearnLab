@@ -1,0 +1,80 @@
+{
+  "learning_styles": [
+    {
+      "title": "Learning Styles Quizzes",
+      "description": "Helps students identify their preferred learning approaches and reflect on study habits. Grounded in cognitive science, it guides users toward research-backed strategies tailored to their strengths."
+    },
+    {
+      "title": "Note-taking Strategies Quiz",
+      "description": "Helps students assess their note-taking habits and discover effective, science-backed techniques. It encourages self-reflection and recommends strategies to enhance comprehension and retention."
+    },
+    {
+      "title": "Resource Hub",
+      "description": "Offers a streamlined way to explore cognitive science principles and effective study strategies. It provides quick access to research-backed insights, practical tools, and curated resources to enhance learning."
+    },
+    {
+      "title": "Community",
+      "description": "The Community feature enables students to connect with peers and form study groups, fostering collaborative learning. It provides a space to practice learning styles, share note-taking techniques, and apply cognitive science strategies in real-world study sessions."
+    },
+    {
+      "title": "Spaced Repetition Study Planner",
+      "description": "Helps students build optimized study schedules based on cognitive science principles, ensuring efficient long-term retention."
+    },
+    {
+      "title": "Title",
+      "description": "Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story. "
+    }
+  ],
+  "pretend_lecture": [
+    {
+      "title": "Learning Styles Quizzes",
+      "description": "Helps students identify their preferred learning approaches and reflect on study habits. Grounded in cognitive science, it guides users toward research-backed strategies tailored to their strengths."
+    },
+    {
+      "title": "Note-taking Strategies Quiz",
+      "description": "Helps students assess their note-taking habits and discover effective, science-backed techniques. It encourages self-reflection and recommends strategies to enhance comprehension and retention."
+    },
+    {
+      "title": "Resource Hub",
+      "description": "Offers a streamlined way to explore cognitive science principles and effective study strategies. It provides quick access to research-backed insights, practical tools, and curated resources to enhance learning."
+    },
+    {
+      "title": "Community",
+      "description": "The Community feature enables students to connect with peers and form study groups, fostering collaborative learning. It provides a space to practice learning styles, share note-taking techniques, and apply cognitive science strategies in real-world study sessions."
+    },
+    {
+      "title": "Spaced Repetition Study Planner",
+      "description": "Helps students build optimized study schedules based on cognitive science principles, ensuring efficient long-term retention."
+    },
+    {
+      "title": "Title",
+      "description": "Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story. "
+    }
+  ],
+  "note_taking": [
+    {
+      "title": "Learning Styles Quizzes",
+      "description": "Helps students identify their preferred learning approaches and reflect on study habits. Grounded in cognitive science, it guides users toward research-backed strategies tailored to their strengths."
+    },
+    {
+      "title": "Note-taking Strategies Quiz",
+      "description": "Helps students assess their note-taking habits and discover effective, science-backed techniques. It encourages self-reflection and recommends strategies to enhance comprehension and retention."
+    },
+    {
+      "title": "Resource Hub",
+      "description": "Offers a streamlined way to explore cognitive science principles and effective study strategies. It provides quick access to research-backed insights, practical tools, and curated resources to enhance learning."
+    },
+    {
+      "title": "Community",
+      "description": "The Community feature enables students to connect with peers and form study groups, fostering collaborative learning. It provides a space to practice learning styles, share note-taking techniques, and apply cognitive science strategies in real-world study sessions."
+    },
+    {
+      "title": "Spaced Repetition Study Planner",
+      "description": "Helps students build optimized study schedules based on cognitive science principles, ensuring efficient long-term retention."
+    },
+    {
+      "title": "Title",
+      "description": "Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story. "
+    }
+  ]
+}

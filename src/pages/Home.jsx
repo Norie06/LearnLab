@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import FeatureItem from '../components/FeatureItem.jsx';
 import ChooseQuizItem from '../components/ChooseQuizItem.jsx';
 import './Home.css'; // Import the CSS file for Home component
 import NoteTaking from './NoteTaking.jsx';
 import LearningStyles from './LearningStyles.jsx';
+import PretendLecture from './PretendLecture.jsx';
+import BeginJourney from '../components/BeginJourney.jsx';
+import TextBlockList from '../components/TextBlockList.jsx';
 
 function Home() {
   const [intro, setIntro] = useState('');
@@ -33,55 +35,20 @@ function Home() {
 
   return (
     <div>
-      <header className="App-header" id="home_hero">
-        <div id='home_hero_content'>
+      <header id="home_hero" className="App-header">
+        <div id='home_hero_content' className='hero-content'>
           <h1>LearnLab</h1>
           <p>{intro}</p>
         </div>
       </header>
       <div id="home_content" className="Horizontal-list">
-        <div id="features">
-          <div id="features_title">
-            <h2>LearnLab Features</h2>
-            <p>You can expect to see here:</p>
-          </div>
-          <ul id='features_list'>
-            {features.map((feature, index) => (
-              <FeatureItem key={index} title={feature.title} description={feature.description} />
-            ))}
-          </ul>
+        <TextBlockList heading={"Learn Lab Features"} subheading={"You can expect to see here:"} topic={"features"} json={features} />
+        <BeginJourney />
+        <div id='home_choose_quiz' className='choose-quiz'>
+          <ChooseQuizItem title="Learning Styles Quiz" image="/images/note-brain-icon.svg" path="/quizzes/learning-styles" element={<NoteTaking />} />
+          <ChooseQuizItem title="Pretend Leture Quiz" image="/images/conference-education-icon.svg" path="/quizzes/pretend-lecture" element={<PretendLecture />} />
+          <ChooseQuizItem title="Note-taking Techniques Quiz" image="/images/note-taking-icon.svg" path="/quizzes/note-taking" element={<LearningStyles />} />
         </div>
-        <div id='begin_journey'>
-          <p>This is where your studying journey begins!</p>
-          <img src="" alt="arrows down" />
-        </div>
-        <div id='choose_quiz'>
-          <ul>
-            <li>
-              <ChooseQuizItem title="Learning Styles Quiz" image="" icon="" path="/note-taking" element={<NoteTaking />} />
-            </li>
-            <li>
-              <p>Are you a visual learner or do you prefer hearing someone</p>
-              <p>...</p>
-            </li>
-            <li>
-              <ChooseQuizItem title="Note-taking Techniques Quiz" image="" icon="" path="/learning-styles" element={<LearningStyles />} />
-            </li>
-          </ul>
-        </div>
-        <ul>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <div>
-              <p>Content</p>
-            </div>
-          </li>
-          <li>
-            <a href="/community">Community</a>
-          </li>
-        </ul>
       </div>
     </div>
   );

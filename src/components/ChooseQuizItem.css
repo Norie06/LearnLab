@@ -1,21 +1,80 @@
 .quiz-item {
     display: flex;
     flex-direction: column;
+    width: 260px;
+    align-items: center;
+    gap: 40px;
 }
 
 button {
-    background-color: #282c34;
+    /* Button */
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    gap: 8px;
+
+    width: 86px;
+    height: 40px;
+
+    background: #2C2C2C;
+    border: 1px solid #2C2C2C;
+    border-radius: 8px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
     color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 0;
     cursor: pointer;
-    font-size: 1em;
-    width: 50%;
-    align-self: center;
+    text-decoration: none;
+}
+
+button:hover {
+    /* Button */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    gap: 8px;
+
+    width: 86px;
+    height: 40px;
+
+    background: #E3E3E3;
+    border: 1px solid #767676;
+    border-radius: 8px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    color: #2C2C2C;
+    text-decoration: none;
+
+}
+
+button:hover img {
+    filter: invert(90%)
 }
 
 Link {
     text-decoration: none;
     color: white;
 }
+
+a {
+    text-decoration: none;
+}
+
