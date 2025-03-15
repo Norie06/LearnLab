@@ -28,8 +28,18 @@ html, body {
   scrollbar-gutter: auto; /* Ensure scrollbar is always visible */
 }
 
+.resource-hub-active {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 153, 132, 0.996078) 0%, rgba(255, 106, 76, 0.996078) 48.5%, rgba(255, 80, 45, 0.996078) 100%);
+  background-blend-mode: color-burn;
+}
+
+
 header {
-  background-color: white;
+  background-color: gray;
+  background-image: url("/public/images/notebook-lines.jpg");
+  background-size: cover;
+  background-blend-mode: normal;
+  filter: grayscale(50%);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -37,6 +47,7 @@ header {
   font-size: calc(5px + 2vmin);
   width: 100%;
   padding-top: 60px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Adds a blurred shadow around the border */
 }
 
 
@@ -52,7 +63,9 @@ nav {
   display: flex;
   justify-content: right;
   align-items: center;
-   margin: 0; /* Ensure no margin is applied */
+  margin: 0; /* Ensure no margin is applied */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the nav bar */
+  z-index: 100;
 }
 
 nav ul {
@@ -64,11 +77,22 @@ nav ul {
 
 nav ul li {
   margin: 0 20px;
+  justify-content: center;
 }
 
 nav ul li a {
   color: #1e1e1e;
   text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  text-align: center;
+  
+}
+
+.active-link {
+  background-color: rgba(234, 244, 246, 1);
+  box-shadow: 0 0 20px rgba(234, 244, 246, 1); /* Adds a blurred shadow around the border */
 }
 
 
@@ -183,4 +207,5 @@ footer {
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin-top: 30px;
 }

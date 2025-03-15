@@ -44,7 +44,7 @@ function Home() {
         <p>{intro}</p>
       </header>
       <div id="home_content" className="Horizontal-list">
-        <TextBlockList heading={"Learn Lab Features"} subheading={"You can expect to see here:"} topic={"features"} json={features} />
+        <TextBlockList heading={"Learn Lab Features"} subheading={"You can expect to see here:"} topic={"features"} json={features} style_class={"thirty-percent"} />
         <BeginJourney />
         <div id='home_choose_quiz' className='choose-quiz'>
           <ChooseQuizItem title="Learning Styles Quiz" image="/images/note-brain-icon.svg" path="/quizzes/learning-styles" element={<NoteTaking />} />

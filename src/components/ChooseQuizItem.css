@@ -6,7 +6,7 @@
     gap: 40px;
 }
 
-button {
+.quiz-item button {
     /* Button */
     box-sizing: border-box;
 
@@ -27,7 +27,6 @@ button {
 
     /* Inside auto layout */
     flex: none;
-    order: 1;
     flex-grow: 0;
 
     color: white;
@@ -35,7 +34,7 @@ button {
     text-decoration: none;
 }
 
-button:hover {
+.quiz-item button:hover {
     /* Button */
 
     box-sizing: border-box;
@@ -65,16 +64,16 @@ button:hover {
 
 }
 
-button:hover img {
+.quiz-item button:hover img {
     filter: invert(90%)
 }
 
-Link {
+.quiz-item Link {
     text-decoration: none;
     color: white;
 }
 
-a {
+.quiz-item a {
     text-decoration: none;
 }
 

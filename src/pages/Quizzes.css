@@ -10,3 +10,12 @@ main {
   justify-content: center;
   width: 100%;
 }
+
+.feature-item {
+  width: 40%;
+  list-style-type: square;
+  padding: 5px;
+  margin: 10px;
+  height: 50%;
+  align-self: flex-start;
+}

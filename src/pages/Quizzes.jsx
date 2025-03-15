@@ -36,9 +36,9 @@ function Quizzes() {
           <ChooseQuizItem title="Pretend Lecture Quiz" image="/images/conference-education-icon.svg" path="/quizzes/pretend-lecture" element={<PretendLecture />} />
           <ChooseQuizItem title="Note-taking Techniques Quiz" image="/images/note-taking-icon.svg" path="/quizzes/note-taking" element={<LearningStyles />} />
         </div>
-        <TextBlockList heading={"Learning Styles"} subheading={"included in the quiz"} topic={"learning_styles"} json={quizzesDescriptions} />
-        <TextBlockList heading={"Pretend Lecture Quiz"} subheading={"included in the quiz"} topic={"pretend_lecture"} json={quizzesDescriptions} />
-        <TextBlockList heading={"Note Taking Techniques"} subheading={"included in the quiz"} topic={"note_taking"} json={quizzesDescriptions}/>
+        <TextBlockList heading={"Learning Styles"} subheading={"included in the quiz"} topic={"learning_styles"} json={quizzesDescriptions} style_class={"forty-percent"} />
+        <TextBlockList heading={"Pretend Lecture Quiz"} subheading={"included in the quiz"} topic={"pretend_lecture"} json={quizzesDescriptions} style_class={"thirty-percent"} />
+        <TextBlockList heading={"Note Taking Techniques"} subheading={"included in the quiz"} topic={"note_taking"} json={quizzesDescriptions} style_class={"forty-percent"}/>
       </main>
     </div>
   );

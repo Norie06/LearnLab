@@ -1,12 +1,3 @@
-.feature-item {
-  max-width: 30%; 
-  list-style-type: square; /* Change bullet point style */
-  padding: 5px;
-  margin: 10px;
-  height: 50%;
-  align-self: flex-start;
-}
-
 /* Additional styles for the list item */
 .feature-item h3 {
   margin: 0;
@@ -20,4 +11,22 @@
   font-size: 1em;
   hyphens: auto;
   word-break: break-word;
+}
+
+.forty-percent {
+  width: 40%; 
+  list-style-type: square; /* Change bullet point style */
+  padding: 5px;
+  margin: 10px;
+  height: 50%;
+  align-self: flex-start;
+}
+
+.thirty-percent {
+  width: 30%; 
+  list-style-type: square; /* Change bullet point style */
+  padding: 5px;
+  margin: 10px;
+  height: 50%;
+  align-self: flex-start;
 }

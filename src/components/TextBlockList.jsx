@@ -2,7 +2,7 @@ import React from 'react';
 import FeatureItem from './FeatureItem.jsx';
 import './TextBlockList.css';
 
-function TextBlockList({ heading, subheading, topic, json }) {
+function TextBlockList({ heading, subheading, topic, json, style_class }) {
   // Determine if json is an object with a topic key or an array
   const items = Array.isArray(json) ? json : (json[topic] || []);
 
@@ -14,7 +14,7 @@ function TextBlockList({ heading, subheading, topic, json }) {
       </div>
       <ul id="features_list" className="text-block-list">
         {items.map((item, index) => (
-          <FeatureItem key={index} title={item.title} description={item.description} />
+          <FeatureItem key={index} title={item.title} description={item.description} style_class={style_class} />
         ))}
       </ul>
     </div>

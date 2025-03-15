@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import React from 'react';
 import './App.css';
 import Home from './pages/Home';
@@ -11,37 +11,80 @@ import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 
 function App() {
+  const location = useLocation(); // Get the current route
+  const isResourceHubActive = location.pathname === '/resource-hub'; // Check if the current route is Resource Hub
+
   return (
-    <div id="App">
+    <div id="App" className={isResourceHubActive ? 'resource-hub-active' : ''}>
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/quizzes">Quizzes</Link>
+            <NavLink
+              to="/quizzes"
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Quizzes
+            </NavLink>
           </li>
           <li>
-            <Link to="/resource-hub">Resource Hub</Link>
+            <NavLink
+              to="/resource-hub"
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Resource Hub
+            </NavLink>
           </li>
           <li>
-            <Link to="/community">Community</Link>
+            <NavLink
+              to="/community"
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Community
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              About
+            </NavLink>
           </li>
           <li>
-            <Link to="/sign-in">Sign In</Link>
+            <NavLink
+              to="/sign-in"
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Sign In
+            </NavLink>
           </li>
           <li>
-            <Link to="/sign-up">Register</Link>
+            <NavLink
+              to="/sign-up"
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Register
+            </NavLink>
           </li>
           <li>
-            <Link to="/profile">Profile</Link>
+            <NavLink
+              to="/profile"
+              className={({ isActive }) => (isActive ? 'active-link' : '')}
+            >
+              Profile
+            </NavLink>
           </li>
         </ul>
       </nav>
-      <main className='page'>
+      <main className="page">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
