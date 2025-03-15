@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import BeginJourney from "../components/BeginJourney";
 import './Quizzes.css';
+import '../App.css';
+import BeginJourney from "../components/BeginJourney";
 import ChooseQuizItem from "../components/ChooseQuizItem";
+import TextBlockList from "../components/TextBlockList";
 import LearningStyles from "./LearningStyles";
 import NoteTaking from "./NoteTaking";
 import PretendLecture from "./PretendLecture";
-import TextBlockList from "../components/TextBlockList";
 
 function Quizzes() {
   const [quizzesDescriptions, setQuizzesDescriptions] = useState([]);
@@ -23,12 +24,10 @@ function Quizzes() {
   }, []);
 
   return (
-    <div id="quizzes">
-      <header id="quizzes_hero" className="App-header">
-        <div id='quizzes_hero_content' className="hero-content">
-          <h1>Quizzes</h1>
-          <p>Test your knowledge and learn more about how you learn best.</p>
-        </div>
+    <div id="quizzes" className="page">
+      <header id="quizzes_hero" className="hero">
+        <h1>Quizzes</h1>
+        <p>Test your knowledge and learn more about how you learn best.</p>
       </header>
       <main>
         <BeginJourney />

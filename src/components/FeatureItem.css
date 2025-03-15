@@ -3,6 +3,8 @@
   list-style-type: square; /* Change bullet point style */
   padding: 5px;
   margin: 10px;
+  height: 50%;
+  align-self: flex-start;
 }
 
 /* Additional styles for the list item */

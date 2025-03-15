@@ -1,5 +1,6 @@
 import React from 'react';
 import FeatureItem from './FeatureItem.jsx';
+import './TextBlockList.css';
 
 function TextBlockList({ heading, subheading, topic, json }) {
   // Determine if json is an object with a topic key or an array

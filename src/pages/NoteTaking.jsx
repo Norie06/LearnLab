@@ -1,6 +1,6 @@
 function NoteTaking() {
   return (
-    <div>
+    <div className="page">
       <h1>Note Taking</h1>
       <p>
         This is the note taking page. You can write your notes here.

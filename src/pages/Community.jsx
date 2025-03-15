@@ -1,6 +1,6 @@
 function Community() {
   return (
-    <div>
+    <div className="page">
       <h1>Community</h1>
     </div>
   );

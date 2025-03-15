@@ -1,6 +1,6 @@
 function PretendLecture() {
   return (
-    <div>
+    <div className="page">
       <h1>Pretend Lecture</h1>
       <p>
         This is a pretend lecture. It's not real, but it's still a lecture.

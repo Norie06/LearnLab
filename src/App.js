@@ -1,5 +1,6 @@
-import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
+import React from 'react';
+import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Community from './pages/Community';
@@ -11,7 +12,7 @@ import SignIn from './pages/SignIn';
 
 function App() {
   return (
-    <div className="App">
+    <div id="App">
       <nav>
         <ul>
           <li>
@@ -40,7 +41,7 @@ function App() {
           </li>
         </ul>
       </nav>
-      <div>
+      <main className='page'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -51,29 +52,30 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-in" element={<SignIn />} />
         </Routes>
-      </div>
-      <main>
+        <footer>
+          <div id="footer_links">
+            <div id="footer_links_about">
+              <h4>LearnLab</h4>
+              <ul className="footer_links_list">
+                <li>
+                  <a href="/about">About</a>
+                </li>
+              </ul>
+            </div>
+            <div id="footer_links_contact">
+              <h4>Contact</h4>
+              <ul className="footer_links_list">
+                <li>
+                  <a href="/contact">Contact us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="footer_legal">
+            <p>© 2025 LearnLab</p>
+          </div>
+        </footer>
       </main>
-      <footer>
-        <div id="footer_links">
-          <div id="footer_links_about">
-            <h4>LearnLab</h4>
-            <ul className="footer_links_list">
-              <li>
-                <a href="/about">About</a>
-              </li>
-            </ul>
-          </div>
-          <div id="footer_links_contact">
-            <h4>Contact</h4>
-            <ul className="footer_links_list">
-              <li>
-                <a href="/contact">Contact us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

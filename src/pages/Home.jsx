@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
+//Stylesheet:
+import './Home.css'; 
+import '../App.css';
+//Components:
 import ChooseQuizItem from '../components/ChooseQuizItem.jsx';
-import './Home.css'; // Import the CSS file for Home component
+import BeginJourney from '../components/BeginJourney.jsx';
+import TextBlockList from '../components/TextBlockList.jsx';
+//Routes to the quizzes:
 import NoteTaking from './NoteTaking.jsx';
 import LearningStyles from './LearningStyles.jsx';
 import PretendLecture from './PretendLecture.jsx';
-import BeginJourney from '../components/BeginJourney.jsx';
-import TextBlockList from '../components/TextBlockList.jsx';
 
 function Home() {
   const [intro, setIntro] = useState('');
@@ -34,12 +38,10 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <header id="home_hero" className="App-header">
-        <div id='home_hero_content' className='hero-content'>
-          <h1>LearnLab</h1>
-          <p>{intro}</p>
-        </div>
+    <div id='home' className='page'>
+      <header id="home_hero" className="hero">
+        <h1>LearnLab</h1>
+        <p>{intro}</p>
       </header>
       <div id="home_content" className="Horizontal-list">
         <TextBlockList heading={"Learn Lab Features"} subheading={"You can expect to see here:"} topic={"features"} json={features} />
