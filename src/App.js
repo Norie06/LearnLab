@@ -9,78 +9,42 @@ import Quizzes from './pages/Quizzes';
 import ResourceHub from './pages/ResourceHub';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
+import LearningStyles from './pages/LearningStylesQuiz';
+import NoteTaking from './pages/NoteTaking';
 
 function App() {
   const location = useLocation(); // Get the current route
-  const isResourceHubActive = location.pathname === '/resource-hub'; // Check if the current route is Resource Hub
 
   return (
-    <div id="App" className={isResourceHubActive ? 'resource-hub-active' : ''}>
+    <div id="App">
       <nav>
+        <ul id='placeholder'></ul>
+        <ul id='main_pages'>
+          <li className={location.pathname === '/' ? 'active-link' : ''}>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li className={location.pathname === '/quizzes' ? 'active-link' : ''}>
+            <NavLink to="/quizzes">Quizzes</NavLink>
+          </li>
+          <li className={location.pathname === '/resource-hub' ? 'active-link' : ''}>
+            <NavLink to="/resource-hub">Resource Hub</NavLink>
+          </li>
+          <li className={location.pathname === '/community' ? 'active-link' : ''}>
+            <NavLink to="/community">Community</NavLink>
+          </li>
+          <li className={location.pathname === '/about' ? 'active-link' : ''}>
+            <NavLink to="/about">About</NavLink>
+          </li>
+        </ul>
         <ul>
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? 'active-link' : '')}
-            >
-              Home
-            </NavLink>
+          <li className={location.pathname === '/sign-in' ? 'active-link' : ''}>
+            <NavLink to="/sign-in">Sign In</NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/quizzes"
-              className={({ isActive }) => (isActive ? 'active-link' : '')}
-            >
-              Quizzes
-            </NavLink>
+          <li className={location.pathname === '/sign-up' ? 'active-link' : ''}>
+            <NavLink to="/sign-up">Register</NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/resource-hub"
-              className={({ isActive }) => (isActive ? 'active-link' : '')}
-            >
-              Resource Hub
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/community"
-              className={({ isActive }) => (isActive ? 'active-link' : '')}
-            >
-              Community
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? 'active-link' : '')}
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/sign-in"
-              className={({ isActive }) => (isActive ? 'active-link' : '')}
-            >
-              Sign In
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/sign-up"
-              className={({ isActive }) => (isActive ? 'active-link' : '')}
-            >
-              Register
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/profile"
-              className={({ isActive }) => (isActive ? 'active-link' : '')}
-            >
-              Profile
-            </NavLink>
+          <li className={location.pathname === '/profile' ? 'active-link' : ''}>
+            <NavLink to="/profile">Profile</NavLink>
           </li>
         </ul>
       </nav>
@@ -94,6 +58,8 @@ function App() {
           <Route path="/resource-hub" element={<ResourceHub />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/quizzes/learning-styles" element={<LearningStyles />}/>
+          <Route path="/quizzes/note-taking" element={<NoteTaking />}/>
         </Routes>
         <footer>
           <div id="footer_links">

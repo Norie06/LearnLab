@@ -1,0 +1,8 @@
+#styles_question_list {
+  list-style: none;
+  gap: 50px;  
+}
+
+#learning_styles_quiz main {
+  width: 50%;
+}

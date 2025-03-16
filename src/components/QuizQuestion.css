@@ -1,0 +1,40 @@
+.quiz-question ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.quiz-question {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.quiz-question button {
+  width: 25px; /* Adjust button size as needed */
+  height: 25px; /* Adjust button size as needed */
+  border-radius: 50%;
+  display: flex; /* Enable Flexbox */
+  position: relative; /* Ensure proper positioning for the image */
+}
+
+.quiz-question img {
+  width: 150%; /* Adjust image size relative to the button */
+  height: 150%; /* Adjust image size relative to the button */
+  object-fit: contain; /* Ensure the image scales properly */
+}
+
+.quiz-question li {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.quiz-question h4 {
+  margin-bottom: 0;
+  padding-bottom: 15px;
+  padding-top: 30px;
+}

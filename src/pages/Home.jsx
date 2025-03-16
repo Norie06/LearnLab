@@ -8,7 +8,7 @@ import BeginJourney from '../components/BeginJourney.jsx';
 import TextBlockList from '../components/TextBlockList.jsx';
 //Routes to the quizzes:
 import NoteTaking from './NoteTaking.jsx';
-import LearningStyles from './LearningStyles.jsx';
+import LearningStyles from './LearningStylesQuiz.jsx';
 import PretendLecture from './PretendLecture.jsx';
 
 function Home() {

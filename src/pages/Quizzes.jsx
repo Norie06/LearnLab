@@ -4,7 +4,7 @@ import '../App.css';
 import BeginJourney from "../components/BeginJourney";
 import ChooseQuizItem from "../components/ChooseQuizItem";
 import TextBlockList from "../components/TextBlockList";
-import LearningStyles from "./LearningStyles";
+import LearningStyles from "./LearningStylesQuiz";
 import NoteTaking from "./NoteTaking";
 import PretendLecture from "./PretendLecture";
 

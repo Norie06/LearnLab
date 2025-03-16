@@ -1,0 +1,112 @@
+{
+  "learningstyles": [
+    {
+      "question": "When learning something new, I prefer to...",
+      "answers": [
+        "Look at diagrams, charts, or watch videos.",
+        "Listen to an explanation or discussion.",
+        "Read about it in a textbook or article.",
+        "Try it out for myself and practice hands-on."
+      ]
+    },
+    {
+      "question": "When trying to remember something, I...",
+      "answers": [
+        "Visualize the information in my head or picture a diagram.",
+        "Say it out loud or repeat it to myself.",
+        "Write it down or reread notes.",
+        "Act it out, associate it with movement, or use hand gestures."
+      ]
+    },
+    {
+      "question": "My ideal study method includes...",
+      "answers": [
+        "Watching videos, using flashcards, or drawing mind maps.",
+        "Participating in study groups and listening to lectures.",
+        "Reading textbooks and taking detailed notes.",
+        "Engaging in experiments, role-playing, or using real-life applications."
+      ]
+    },
+    {
+      "question": "If I need to give someone directions, I would...",
+      "answers": [
+        "Draw them a map or sketch a visual representation.",
+        "Explain the directions to them verbally.",
+        "Write down step-by-step instructions.",
+        "Walk them through it or use gestures to show the way."
+      ]
+    },
+    {
+      "question": "When studying for an exam, I prefer to...",
+      "answers": [
+        "Use charts, graphs, and diagrams to organize information.",
+        "Record myself reading notes and listen back.",
+        "Rewrite and summarize my notes multiple times.",
+        "Use flashcards, do practice problems, or study with movement."
+      ]
+    },
+    {
+      "question": "In a lecture, I am more likely to...",
+      "answers": [
+        "Watch the professor's slides and focus on visuals.",
+        "Pay attention to the professor's tone and explanations.",
+        "Take detailed notes and review them later.",
+        "Doodle, fidget, or need to move around while listening."
+      ]
+    },
+    {
+      "question": "I learn best when...",
+      "answers": [
+        "I can see a concept in action, like in a video or diagram.",
+        "I can discuss and explain the topic to someone else.",
+        "I read and analyze information on my own.",
+        "I can engage in a hands-on activity or project."
+      ]
+    },
+    {
+      "question": "I understand instructions better when...",
+      "answers": [
+        "They include pictures, charts, or diagrams.",
+        "Someone explains them to me verbally.",
+        "I can read them step-by-step on paper.",
+        "I can physically try out what I'm supposed to do."
+      ]
+    },
+    {
+      "question": "When watching a movie, I tend to focus on...",
+      "answers": [
+        "The visual effects, colors, and cinematography.",
+        "The soundtrack, dialogue, and tone of voice.",
+        "The storyline and written subtitles.",
+        "The action scenes and physical movements of the characters."
+      ]
+    },
+    {
+      "question": "If I needed to memorize a speech, I would...",
+      "answers": [
+        "Use a visual outline or color-code important points.",
+        "Record myself reading it and listen repeatedly.",
+        "Write it down multiple times and read it silently.",
+        "Practice delivering it while moving around."
+      ]
+    },
+    {
+      "question": "I find it easiest to concentrate when...",
+      "answers": [
+        "I have a visually organized workspace.",
+        "I listen to soft music or spoken instructions.",
+        "I have a quiet space with written materials.",
+        "I can move around and take breaks frequently."
+      ]
+    },
+    {
+      "question": "If I were learning a new dance move, I would...",
+      "answers": [
+        "Watch a video of someone demonstrating it.",
+        "Listen to the instructor's verbal cues carefully.",
+        "Read written steps or instructions.",
+        "Jump in and practice the moves immediately."
+      ]
+    }
+  ]
+}
