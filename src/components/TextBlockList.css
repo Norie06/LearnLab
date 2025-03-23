@@ -1,6 +1,5 @@
 #features {
   justify-content: space-around;
-  align-items: center;
   margin: 30px;
   margin-right: 15%;
   margin-left: 15%;
@@ -10,6 +9,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: top;
+  gap: 5px;
 }
 
 #features_title {
@@ -28,4 +28,5 @@
 #features_title p {
   margin-top: 0; /* Remove top margin */
   margin-bottom: 10px; /* Adjust as needed */
+  color: #757575;
 }

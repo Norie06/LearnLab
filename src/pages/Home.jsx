@@ -3,13 +3,14 @@ import React, { useEffect, useState } from 'react';
 import './Home.css'; 
 import '../App.css';
 //Components:
-import ChooseQuizItem from '../components/ChooseQuizItem.jsx';
+//import ChooseQuizItem from '../components/ChooseQuizItem.jsx';
 import BeginJourney from '../components/BeginJourney.jsx';
 import TextBlockList from '../components/TextBlockList.jsx';
+import { Link } from 'react-router-dom';
 //Routes to the quizzes:
-import NoteTaking from './NoteTaking.jsx';
-import LearningStyles from './LearningStylesQuiz.jsx';
-import PretendLecture from './PretendLecture.jsx';
+//import NoteTaking from './NoteTaking.jsx';
+//import LearningStyles from './LearningStylesQuiz.jsx';
+//import PretendLecture from './PretendLecture.jsx';
 
 function Home() {
   const [intro, setIntro] = useState('');
@@ -46,14 +47,23 @@ function Home() {
       <div id="home_content" className="Horizontal-list">
         <TextBlockList heading={"Learn Lab Features"} subheading={"You can expect to see here:"} topic={"features"} json={features} style_class={"thirty-percent"} />
         <BeginJourney />
-        <div id='home_choose_quiz' className='choose-quiz'>
-          <ChooseQuizItem title="Learning Styles Quiz" image="/images/note-brain-icon.svg" path="/quizzes/learning-styles" element={<NoteTaking />} />
-          <ChooseQuizItem title="Pretend Leture Quiz" image="/images/conference-education-icon.svg" path="/quizzes/pretend-lecture" element={<PretendLecture />} />
-          <ChooseQuizItem title="Note-taking Techniques Quiz" image="/images/note-taking-icon.svg" path="/quizzes/note-taking" element={<LearningStyles />} />
-        </div>
+        <Link to={'/tests'}>
+          <button id='tests_button'>
+            <img src="/images/pen-end.svg" alt="pen end icon" />
+              Tests
+            <img src="/images/pen-end.svg" alt="pen end icon" />
+          </button>
+        </Link>
+
       </div>
     </div>
   );
 }
 
 export default Home;
+
+//<div id='home_choose_quiz' className='choose-quiz'>
+//<ChooseQuizItem title="Learning Styles Quiz" image="/images/note-brain-icon.svg" path="/quizzes/learning-styles" element={<NoteTaking />} />
+//<ChooseQuizItem title="Pretend Leture Quiz" image="/images/conference-education-icon.svg" path="/quizzes/pretend-lecture" element={<PretendLecture />} />
+//<ChooseQuizItem title="Note-taking Techniques Quiz" image="/images/note-taking-icon.svg" path="/quizzes/note-taking" element={<LearningStyles />} />
+//</div>

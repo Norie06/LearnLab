@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './Quizzes.css';
+import './Tests.css';
 import '../App.css';
 import BeginJourney from "../components/BeginJourney";
 import ChooseQuizItem from "../components/ChooseQuizItem";
@@ -8,7 +8,7 @@ import LearningStyles from "./LearningStylesQuiz";
 import NoteTaking from "./NoteTaking";
 import PretendLecture from "./PretendLecture";
 
-function Quizzes() {
+function Tests() {
   const [quizzesDescriptions, setQuizzesDescriptions] = useState([]);
 
   useEffect(() => {
@@ -26,22 +26,22 @@ function Quizzes() {
   return (
     <div id="quizzes" className="page">
       <header id="quizzes_hero" className="hero">
-        <h1>Quizzes</h1>
+        <h1>Tests</h1>
         <p>Test your knowledge and learn more about how you learn best.</p>
       </header>
       <main>
         <BeginJourney />
         <div id='quizzes_choose_quiz' className='choose_quiz'>
-          <ChooseQuizItem title="Learning Styles Quiz" image="/images/note-brain-icon.svg" path="/quizzes/learning-styles" element={<NoteTaking />} />
-          <ChooseQuizItem title="Pretend Lecture Quiz" image="/images/conference-education-icon.svg" path="/quizzes/pretend-lecture" element={<PretendLecture />} />
-          <ChooseQuizItem title="Note-taking Techniques Quiz" image="/images/note-taking-icon.svg" path="/quizzes/note-taking" element={<LearningStyles />} />
+          <ChooseQuizItem title="Learning Styles Test" image="/images/note-brain-icon.svg" path="/tests/learning-styles" element={<NoteTaking />} />
+          <ChooseQuizItem title="Pretend Lecture Test" image="/images/conference-education-icon.svg" path="/tests/pretend-lecture" element={<PretendLecture />} />
+          <ChooseQuizItem title="Note-taking Techniques Test" image="/images/note-taking-icon.svg" path="/tests/note-taking" element={<LearningStyles />} />
         </div>
-        <TextBlockList heading={"Learning Styles"} subheading={"included in the quiz"} topic={"learning_styles"} json={quizzesDescriptions} style_class={"forty-percent"} />
-        <TextBlockList heading={"Pretend Lecture Quiz"} subheading={"included in the quiz"} topic={"pretend_lecture"} json={quizzesDescriptions} style_class={"thirty-percent"} />
-        <TextBlockList heading={"Note Taking Techniques"} subheading={"included in the quiz"} topic={"note_taking"} json={quizzesDescriptions} style_class={"forty-percent"}/>
+        <TextBlockList heading={"Learning Styles"} subheading={"included in the test"} topic={"learning_styles"} json={quizzesDescriptions} style_class={"forty-percent"} />
+        <TextBlockList heading={"Pretend Lecture Test"} subheading={"included in the test"} topic={"pretend_lecture"} json={quizzesDescriptions} style_class={"thirty-percent"} />
+        <TextBlockList heading={"Note Taking Techniques"} subheading={"included in the test"} topic={"note_taking"} json={quizzesDescriptions} style_class={"forty-percent"}/>
       </main>
     </div>
   );
 }
 
-export default Quizzes;
+export default Tests;

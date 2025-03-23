@@ -1,32 +1,69 @@
-/* Additional styles for the list item */
-.feature-item h3 {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-.feature-item p {
+.feature-item-p {
   text-align: justify;
-  padding-right: 15%;
+  padding-left: 40px; /* Match the bullet width + margin-right */
   font-size: 1em;
   hyphens: auto;
   word-break: break-word;
+  color: #757575 !important;
+  margin-top: 10px; /* Ensure no extra margin is added */
 }
 
-.forty-percent {
-  width: 40%; 
-  list-style-type: square; /* Change bullet point style */
+.feature-item-h3 {
+  margin: 0;
   padding: 5px;
-  margin: 10px;
-  height: 50%;
-  align-self: flex-start;
+  vertical-align: middle; /* Align the heading with the bullet */
+  display: inline-block;
+  margin-left: 30px; /* Add space to account for the bullet */
 }
 
 .thirty-percent {
-  width: 30%; 
-  list-style-type: square; /* Change bullet point style */
+  width: 30%;
   padding: 5px;
   margin: 10px;
-  height: 50%;
+  height: auto; /* Adjust height to fit content */
   align-self: flex-start;
+  list-style: none; /* Remove default bullet points */
+  position: relative; /* Required for positioning the ::before element */
+}
+
+.thirty-percent::before {
+  content: url('../images/Info.svg'); /* Path to the SVG */
+  display: inline-block;
+  width: 16px; /* Set the desired width */
+  height: 16px; /* Set the desired height */
+  margin-right: 10px; /* Add spacing between the bullet and the title */
+  position: absolute;
+  left: 0; /* Align the bullet to the left */
+  top: 0; /* Align the bullet with the top of the title */
+  transform: translateY(4px); /* Fine-tune vertical alignment */
+}
+
+/*.thirty-percent::marker {
+  content: url('../images/Info.svg'); 
+  transform: scale(0.4); 
+  display: inline-block;
+  vertical-align: middle; 
+}
+*/
+
+.forty-percent {
+  width: 35%;
+  padding: 5px;
+  margin: 10px;
+  height: auto; /* Adjust height to fit content */
+  align-self: flex-start;
+  list-style: none; /* Remove default bullet points */
+  position: relative; /* Required for positioning the ::before element */
+}
+
+.forty-percent::before {
+  content: url('../images/Info.svg'); /* Path to the SVG */
+  display: inline-block;
+  width: 16px; /* Set the desired width */
+  height: 16px; /* Set the desired height */
+  margin-right: 10px; /* Add spacing between the bullet and the title */
+  position: absolute;
+  left: 0; /* Align the bullet to the left */
+  top: 0; /* Align the bullet with the top of the title */
+  transform: translateY(4px); /* Fine-tune vertical alignment */
 }
