@@ -77,3 +77,6 @@
     text-decoration: none;
 }
 
+.quiz-item p {
+    text-align: center;
+}

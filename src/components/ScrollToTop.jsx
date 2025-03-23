@@ -6,6 +6,7 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    console.log(`Route changed to: ${pathname}`); // Log the current route
     window.scrollTo(0, 0); // Scroll to the top of the page
   }, [pathname]); // Trigger when the route changes
 

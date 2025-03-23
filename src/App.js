@@ -60,8 +60,8 @@ function App() {
           <Route path="/resource-hub" element={<ResourceHub />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/quizzes/learning-styles" element={<LearningStyles />}/>
-          <Route path="/quizzes/note-taking" element={<NoteTaking />}/>
+          <Route path="/tests/learning-styles" element={<LearningStyles />}/>
+          <Route path="/tests/note-taking" element={<NoteTaking />}/>
         </Routes>
         <footer>
           <div id="footer_links">

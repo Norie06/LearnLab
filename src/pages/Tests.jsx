@@ -32,9 +32,9 @@ function Tests() {
       <main>
         <BeginJourney />
         <div id='quizzes_choose_quiz' className='choose_quiz'>
-          <ChooseQuizItem title="Learning Styles Test" image="/images/note-brain-icon.svg" path="/tests/learning-styles" element={<NoteTaking />} />
-          <ChooseQuizItem title="Pretend Lecture Test" image="/images/conference-education-icon.svg" path="/tests/pretend-lecture" element={<PretendLecture />} />
-          <ChooseQuizItem title="Note-taking Techniques Test" image="/images/note-taking-icon.svg" path="/tests/note-taking" element={<LearningStyles />} />
+          <ChooseQuizItem title="Learning Styles Test" image="/images/note-brain-icon.svg" path="/tests/learning-styles" element={<NoteTaking />} desc={"Many people have a mix of learning styles! Use this test to identify your strengths and combine techniques for a more effective study experience."} />
+          <ChooseQuizItem title="Pretend Lecture Test" image="/images/conference-education-icon.svg" path="/tests/pretend-lecture" element={<PretendLecture />} desc={"Do you know whether you learn better when you preview the slides before your lecture? Or , on the other hand, does it distract you? Test it yourself here."} />
+          <ChooseQuizItem title="Note-taking Techniques Test" image="/images/note-taking-icon.svg" path="/tests/note-taking" element={<LearningStyles />} desc={"Everyone has their own way of taking notes! Your results will highlight the method that suits you best—but don’t be afraid to mix and match for even better learning."} />
         </div>
         <TextBlockList heading={"Learning Styles"} subheading={"included in the test"} topic={"learning_styles"} json={quizzesDescriptions} style_class={"forty-percent"} />
         <TextBlockList heading={"Pretend Lecture Test"} subheading={"included in the test"} topic={"pretend_lecture"} json={quizzesDescriptions} style_class={"thirty-percent"} />

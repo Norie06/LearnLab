@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./ChooseQuizItem.css";
 
-function ChooseQuizItem({ title, image, path }) {
+function ChooseQuizItem({ title, image, path, desc }) {
   return (
     <li className="quiz-item">
       <h3>{title}</h3>
@@ -13,6 +13,9 @@ function ChooseQuizItem({ title, image, path }) {
           Start
         </button>
       </Link>
+      <p>
+        {desc}
+      </p>
     </li>
   );
 }

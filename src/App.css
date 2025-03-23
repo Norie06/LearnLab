@@ -217,8 +217,8 @@ footer {
 
 .hero p {
   margin: 0; /* Remove top and bottom margin */
-  padding: 2%; /* Remove padding */
-  font-size: 0.8em;
+  padding: 3%; /* Remove padding */
+  font-size: 0.75em;
   text-align: center;
   margin-top: 5px;
   background-image: url('/public/images/paper-texture.png');
