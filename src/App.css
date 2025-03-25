@@ -193,6 +193,7 @@ footer {
   margin-bottom: 0; /* Adjust as needed */
   font-size: 3.8em;
   font-family: 'Kalam';
+  text-align: center;
 }
 
 @font-face {
