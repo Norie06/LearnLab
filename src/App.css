@@ -114,9 +114,18 @@ nav ul li a {
   text-align: center;
 }
 
+nav ul li:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
 .active-link {
   background-color: aliceblue;
   box-shadow: 0 0 8px rgba(80, 107, 110); /* Adds a blurred shadow around the border */
+}
+
+.active-link:hover {
+  transform: scale(1);
 }
 
 
