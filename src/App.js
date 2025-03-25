@@ -38,11 +38,11 @@ function App() {
           </li>
         </ul>
         <ul>
-          <li className={location.pathname === '/sign-in' ? 'active-link' : ''}>
-            <NavLink to="/sign-in">Sign In</NavLink>
+          <li className={location.pathname === '/log-in' ? 'active-link' : ''}>
+            <NavLink to="/log-in">Log In</NavLink>
           </li>
           <li className={location.pathname === '/sign-up' ? 'active-link' : ''}>
-            <NavLink to="/sign-up">Register</NavLink>
+            <NavLink to="/sign-up">Sign Up</NavLink>
           </li>
           <li className={location.pathname === '/profile' ? 'active-link' : ''}>
             <NavLink to="/profile">Profile</NavLink>
@@ -59,7 +59,7 @@ function App() {
           <Route path="/tests" element={<Tests />} />
           <Route path="/resource-hub" element={<ResourceHub />} />
           <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/log-in" element={<SignIn />} />
           <Route path="/tests/learning-styles" element={<LearningStyles />}/>
           <Route path="/tests/note-taking" element={<NoteTaking />}/>
         </Routes>
