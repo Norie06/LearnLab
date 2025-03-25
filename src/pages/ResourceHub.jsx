@@ -14,31 +14,31 @@ function ResourceHub() {
           <div className='topic-content'>
             <h2>Core Cognitive Learning Concepts</h2>
           </div>
-          <div className='arrow-right'></div>
+          <img src="/images/pencil-tip-7.svg" alt="" />
         </Link>
         <Link to={'/resource-hub/advanced-cog-concepts'} className='topic-card'>
           <div className='topic-content'>
             <h2>Advanced Cognitive Concepts</h2>
           </div>
-          <div className='arrow-right'></div>
+          <img src="/images/pencil-tip-7.svg" alt="" />
         </Link>
         <Link to={'/resource-hub/learning-styles'} className='topic-card'>
           <div className='topic-content'>
             <h2>Learning Styles</h2>
           </div>
-          <div className='arrow-right'></div>
+          <img src="/images/pencil-tip-7.svg" alt="" />
         </Link>
         <Link to={'/resource-hub/note-taking-styles'} className='topic-card'>
           <div className='topic-content'>
             <h2>Note-Taking Styles</h2>
           </div>
-          <div className='arrow-right'></div>
+          <img src="/images/pencil-tip-7.svg" alt="" />
         </Link>
         <Link to={'/resource-hub/useful-tools'} className='topic-card'>
           <div className='topic-content'>
             <h2>More Useful Interactive Tools</h2>
           </div>
-          <div className='arrow-right'></div>
+          <img src="/images/pencil-tip-7.svg" alt="" />
         </Link>
         
       </main>
