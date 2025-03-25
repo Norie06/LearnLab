@@ -58,10 +58,15 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/tests" element={<Tests />} />
           <Route path="/resource-hub" element={<ResourceHub />} />
+          <Route path="/resource-hub/advanced-cog-concepts" element={<ResourceHub />} />
+          <Route path="/resource-hub/learning-styles" element={<ResourceHub />} />
+          <Route path="/resource-hub/core-cog-learning" element={<ResourceHub />} />
+          <Route path="/resource-hub/note-taking-styles" element={<ResourceHub />} />
+          <Route path="/resource-hub/useful-tools" element={<ResourceHub />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/log-in" element={<SignIn />} />
-          <Route path="/tests/learning-styles" element={<LearningStyles />}/>
-          <Route path="/tests/note-taking" element={<NoteTaking />}/>
+          <Route path="/tests/learning-style-test" element={<LearningStyles />}/>
+          <Route path="/tests/note-taking-test" element={<NoteTaking />}/>
         </Routes>
         <footer>
           <div id="footer_links">
