@@ -19,12 +19,14 @@
   border-radius: 50%;
   display: flex; /* Enable Flexbox */
   position: relative; /* Ensure proper positioning for the image */
+  justify-content: center;
 }
 
 .quiz-question img {
   width: 150%; /* Adjust image size relative to the button */
   height: 150%; /* Adjust image size relative to the button */
   object-fit: contain; /* Ensure the image scales properly */
+  align-self: center;
 }
 
 .quiz-question li {
