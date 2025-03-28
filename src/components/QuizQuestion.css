@@ -27,6 +27,7 @@
   height: 150%; /* Adjust image size relative to the button */
   object-fit: contain; /* Ensure the image scales properly */
   align-self: center;
+  justify-self: center;
 }
 
 .quiz-question li {

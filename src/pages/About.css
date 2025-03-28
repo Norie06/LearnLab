@@ -1,0 +1,24 @@
+#about main {
+    width: 50%;
+}
+
+#about h2 {
+    align-self: start;
+    margin: 20px 0 0px 0;
+}
+
+#about main p {
+    align-items: start;
+    justify-items: start;
+    text-align: justify;
+    width: fill-available;
+}
+
+#about .bold {
+    font-weight: bold;
+}
+
+#thank_you {
+    text-align: center !important;
+    width: 60% !important;
+}

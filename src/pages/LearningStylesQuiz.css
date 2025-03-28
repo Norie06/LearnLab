@@ -6,3 +6,14 @@
 #learning_styles_quiz main {
   width: 50%;
 }
+
+#learning_styles_quiz button {
+  background-color: whitesmoke;
+}
+
+#learning_styles_quiz button img {
+  transition: 0.2s ease;
+}
+#learning_styles_quiz button:hover img {
+  filter: none;
+}

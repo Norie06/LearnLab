@@ -17,8 +17,7 @@ function LearningStylesQuiz() {
   return (
     <div id="learning_styles_quiz" className="page">
       <header className="hero">
-        <h1>Learning Styles Quiz</h1>
-        <p></p>
+        <h1>Learning Styles Test</h1>
       </header>
       <main>
         <p>Read each statement carefully and choose the option that best describes you.</p>
