@@ -230,7 +230,7 @@ function SignUp() {
                 </button>
             </form>
             <p id='have-account'>
-                Already have an account? <a href="/signin">Sign In</a> {/* Add link to sign in page */}
+                Already have an account? <a href="/log-in">Log In</a> {/* Add link to sign in page */}
             </p>
         </section>
         )}

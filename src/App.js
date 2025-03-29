@@ -12,6 +12,7 @@ import SignIn from './pages/SignIn';
 import LearningStyles from './pages/LearningStylesQuiz';
 import NoteTaking from './pages/NoteTaking';
 import ScrollToTop from './components/ScrollToTop';
+import ResourceHubSubpage from './pages/ResourceHubSubpage';
 
 function App() {
   const location = useLocation(); // Get the current route
@@ -58,11 +59,11 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/tests" element={<Tests />} />
           <Route path="/resource-hub" element={<ResourceHub />} />
-          <Route path="/resource-hub/advanced-cog-concepts" element={<ResourceHub />} />
-          <Route path="/resource-hub/learning-styles" element={<ResourceHub />} />
-          <Route path="/resource-hub/core-cog-learning" element={<ResourceHub />} />
-          <Route path="/resource-hub/note-taking-styles" element={<ResourceHub />} />
-          <Route path="/resource-hub/useful-tools" element={<ResourceHub />} />
+          <Route path="/resource-hub/advanced-cog-concepts" element={<ResourceHubSubpage title="Advanced Cognitive Concepts" folderPath="../content/resource-hub/advanced-cog-concepts" />} />
+          <Route path="/resource-hub/learning-styles" element={<ResourceHubSubpage title="Learning Styles" folderPath="../content/resource-hub/learning-styles" />} />
+          <Route path="/resource-hub/core-cog-learning" element={<ResourceHubSubpage title="Core Cognitive Learning Concepts" folderPath="../content/resource-hub/core-cognitive-learning-concepts" />} />
+          <Route path="/resource-hub/note-taking-styles" element={<ResourceHubSubpage title="Note-Taking Styles" folderPath="../content/resource-hub/note-taking-styles" />} />
+          <Route path="/resource-hub/useful-tools" element={<ResourceHubSubpage title="More Useful Interactive Tools" folderPath="../content/resource-hub/more-tools" />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/log-in" element={<SignIn />} />
           <Route path="/tests/learning-style-test" element={<LearningStyles />}/>

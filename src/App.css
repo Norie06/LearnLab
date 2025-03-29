@@ -104,7 +104,7 @@ nav ul li {
   text-align: center;
   align-content: center;
   border-radius: 10px;
-  transition: 0.3s ease;
+  transition: 0.3s ease, box-shadow 0.3s ease;
   padding: 5px 10px;
 }
 

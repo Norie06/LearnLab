@@ -1,0 +1,50 @@
+.resource-hub-post {
+  margin-top: 70px;
+  width: 60%;
+  padding: 4%;
+  background: radial-gradient(circle, rgba(20, 90, 100, 0.5) 0%, rgba(50, 120, 130, 0.85) 100%);
+  color: whitesmoke;
+  border-radius: 70px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-hub-post.in-view {
+  transform: scale(1.05); /* Scale up when in view */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add a stronger shadow */
+}
+
+.resource-hub-post a{
+  color: rgba(8, 55, 62, 0.76);
+  text-decoration: underline;
+}
+
+.resource-hub-post h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  margin-top: 0;
+}
+
+.resource-hub-post h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.resource-hub-post ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.resource-hub-post ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+.resource-hub-post strong {
+  font-weight: bold;
+}
+
+.resource-hub-post em {
+  font-style: italic;
+}
