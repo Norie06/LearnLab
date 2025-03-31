@@ -192,8 +192,6 @@ footer {
   margin-bottom: 40px;
   padding-top: 110px;
   padding-bottom: 50px;
-  padding-left: 27%;
-  padding-right: 27%;
 }
 
 .hero h1 {
@@ -227,14 +225,14 @@ footer {
 
 .hero p {
   margin: 0; /* Remove top and bottom margin */
-  padding: 3%; /* Remove padding */
-  font-size: 0.75em;
+  padding: 2%; /* Remove padding */
+  font-size: 0.8em;
   text-align: center;
   margin-top: 5px;
   background-color: whitesmoke;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
-  background-size: cover;
+  width: 50%;
 }
 
 
@@ -324,4 +322,17 @@ button img {
 
 button:hover img {
   filter: invert(90%)
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-color: radial-gradient(50% 50% at 50% 50%, aliceblue 40%, rgba(197, 223, 226, 225) 100%); /* Semi-transparent white background */
+  position: fixed; /* Fixed position to cover the entire screen */
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Ensure it appears above all other content */
 }

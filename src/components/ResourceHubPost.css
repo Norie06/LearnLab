@@ -1,12 +1,13 @@
 .resource-hub-post {
   margin-top: 70px;
-  width: 60%;
+  width: 55%;
   padding: 4%;
   background: radial-gradient(circle, rgba(20, 90, 100, 0.5) 0%, rgba(50, 120, 130, 0.85) 100%);
   color: whitesmoke;
   border-radius: 70px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.95em;
 }
 
 .resource-hub-post.in-view {

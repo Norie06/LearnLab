@@ -1,37 +1,53 @@
 import { useState, useEffect } from "react";
 import "../App.css";
 import QuizQuestion from "../components/QuizQuestion";
-import "./LearningStylesQuiz.css"
+import "./LearningStylesQuiz.css";
+import { Link } from "react-router-dom";
 
 function LearningStylesQuiz() {
-  const [quizData, setQuizData] = useState([]); // State to store the quiz data
+  const [quizData, setQuizData] = useState([]);
+  const [selectedAnswers, setSelectedAnswers] = useState({}); // Track selected answers
 
   useEffect(() => {
-    // Fetch the JSON file from the public folder
     fetch("/content/learningstylesQuiz.json")
       .then((response) => response.json())
       .then((data) => setQuizData(data.learningstyles))
       .catch((error) => console.error("Error fetching quiz data:", error));
-  }, []); // Empty dependency array ensures this runs only once
+  }, []);
+
+  const handleAnswerSelected = (questionNumber, answerIndex) => {
+    setSelectedAnswers((prev) => ({
+      ...prev,
+      [questionNumber]: answerIndex,
+    }));
+  };
 
   return (
     <div id="learning_styles_quiz" className="page">
       <header className="hero">
-        <h1>Learning Styles Test</h1>
+        <h1>Discover your learning style!</h1>
       </header>
       <main>
         <p>Read each statement carefully and choose the option that best describes you.</p>
         <ul id="styles_question_list">
           {quizData.map((quizItem, index) => (
             <li key={index}>
-              <QuizQuestion 
-                number={index + 1} 
-                question={quizItem.question} 
-                answers={quizItem.answers} 
+              <QuizQuestion
+                number={index + 1}
+                question={quizItem.question}
+                answers={quizItem.answers}
+                onAnswerSelected={(answerIndex) =>
+                  handleAnswerSelected(index + 1, answerIndex)
+                }
               />
             </li>
           ))}
         </ul>
+        <Link
+          to={`/tests/learning-styles/results/${JSON.stringify(selectedAnswers)}`}
+        >
+          <button id="submit_quiz" className="button">Submit</button>
+        </Link>
       </main>
     </div>
   );

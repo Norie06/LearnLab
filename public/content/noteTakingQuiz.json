@@ -1,0 +1,85 @@
+{
+  "noteTakingStyles": [
+    {
+      "question": "How do you prefer to organize information?",
+      "answers": [
+        "Using bullet points and headings.",
+        "Drawing diagrams and connecting ideas.",
+        "Combining text with doodles and visuals.",
+        "Dividing the page into sections for cues, notes, and summaries."
+      ]
+    },
+    {
+      "question": "When studying, what helps you remember information best?",
+      "answers": [
+        "Writing detailed summaries.",
+        "Creating colorful diagrams.",
+        "Adding sketches and icons to my notes.",
+        "Reviewing structured notes with clear cues."
+      ]
+    },
+    {
+      "question": "What's your favorite way to brainstorm ideas?",
+      "answers": [
+        "Listing them in order.",
+        "Drawing a web or connected concepts.",
+        "Sketching ideas with visuals.",
+        "Organizing them into categories."
+      ]
+    },
+    {
+      "question": "How do you usually review your notes?",
+      "answers": [
+        "Reading through bullet points and summaries.",
+        "Looking at diagrams and connections.",
+        "Reviewing visuals and doodles.",
+        "Using cues to quiz myself."
+      ]
+    },
+    {
+      "question": "What's your learning style?",
+      "answers": [
+        "Reading/Writing.",
+        "Visual.",
+        "Kinesthetic.",
+        "Auditory."
+      ]
+    },
+    {
+      "question": "How do you prefer to capture complex ideas?",
+      "answers": [
+        "Breaking them down into lists and subpoints.",
+        "Mapping them out with arrows and connections.",
+        "Drawing them as a story or comic strip.",
+        "Summarizing them in a structured format."
+      ]
+    },
+    {
+      "question": "How do you feel about color in your notes?",
+      "answers": [
+        "I use color sparingly to highlight key points.",
+        "I love using lots of colors to make my notes vibrant.",
+        "I use color to create visuals and icons.",
+        "I prefer minimal color, focusing on structure."
+      ]
+    },
+    {
+      "question": "When you're in a lecture or meeting, what do you focus on most?",
+      "answers": [
+        "The main points and supporting details.",
+        "The connections between ideas.",
+        "The visuals or examples provided.",
+        "The overall structure and organization of the content."
+      ]
+    },
+    {
+      "question": "How do you prefer to summarize information?",
+      "answers": [
+        "Writing a concise paragraph or bullet list.",
+        "Creating a diagram or flowchart.",
+        "Drawing a visual summary with icons and sketches.",
+        "Using a structured format with cues and key points."
+      ]
+    }
+  ]
+}

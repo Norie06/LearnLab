@@ -1,5 +1,5 @@
 import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -10,12 +10,37 @@ import ResourceHub from './pages/ResourceHub';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import LearningStyles from './pages/LearningStylesQuiz';
+import LearningStylesResults from './pages/LearningStylesResults';
 import NoteTaking from './pages/NoteTaking';
-import ScrollToTop from './components/ScrollToTop';
+import PretendLecture from './pages/PretendLecture';
 import ResourceHubSubpage from './pages/ResourceHubSubpage';
 
+import ScrollToTop from './components/ScrollToTop';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 function App() {
+  const [isLoading, setIsLoading] = useState(true); 
   const location = useLocation(); // Get the current route
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Set loading to false after 2 seconds
+    }, 2000); // Adjust the delay as needed
+    return () => clearTimeout(timer); // Cleanup the timer on component unmount
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="loading-screen">
+        <DotLottieReact
+          src="https://lottie.host/69eb9efe-27bc-42ba-be3d-df1c17e49468/LicLOFH7mf.lottie"
+          autoplay
+          loop
+          style={{ width: '30%', height: '30%' }}
+        />
+      </div>
+    );
+  }
 
   return (
     <div id="App">
@@ -66,8 +91,10 @@ function App() {
           <Route path="/resource-hub/useful-tools" element={<ResourceHubSubpage title="More Useful Interactive Tools" folderPath="../content/resource-hub/more-tools" />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/log-in" element={<SignIn />} />
-          <Route path="/tests/learning-style-test" element={<LearningStyles />}/>
-          <Route path="/tests/note-taking-test" element={<NoteTaking />}/>
+          <Route path="/tests/learning-styles" element={<LearningStyles />}/>
+          <Route path="/tests/learning-styles/results" element={<LearningStylesResults />}/>
+          <Route path="/tests/note-taking" element={<NoteTaking />}/>
+          <Route path="/tests/pretend-lecture" element={<PretendLecture />}/>
         </Routes>
         <footer>
           <div id="footer_links">

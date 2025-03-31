@@ -7,13 +7,18 @@
   width: 50%;
 }
 
-#learning_styles_quiz button {
+#styles_question_list button {
   background-color: whitesmoke;
 }
 
-#learning_styles_quiz button img {
+#styles_question_list button img {
   transition: 0.2s ease;
 }
-#learning_styles_quiz button:hover img {
+#styles_question_list button:hover img {
   filter: none;
+}
+
+#submit_quiz {
+  margin-top: 10px;
+  padding: 10px 20px;
 }
