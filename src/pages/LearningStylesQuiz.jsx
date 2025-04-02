@@ -16,10 +16,14 @@ function LearningStylesQuiz() {
   }, []);
 
   const handleAnswerSelected = (questionNumber, answerIndex) => {
-    setSelectedAnswers((prev) => ({
-      ...prev,
-      [questionNumber]: answerIndex,
-    }));
+    setSelectedAnswers((prev) => {
+      const updatedAnswers = {
+        ...prev,
+        [questionNumber]: answerIndex,
+      };
+      console.log("Updated Selected Answers:", updatedAnswers); // Debug log
+      return updatedAnswers;
+    });
   };
 
   return (
@@ -44,7 +48,11 @@ function LearningStylesQuiz() {
           ))}
         </ul>
         <Link
-          to={`/tests/learning-styles/results/${JSON.stringify(selectedAnswers)}`}
+          to={{
+            pathname: "/tests/learning-styles/results",
+            state: { selectedAnswers },
+          }}
+          onClick={() => console.log("Passing Selected Answers:", selectedAnswers)} // Debug log
         >
           <button id="submit_quiz" className="button">Submit</button>
         </Link>
