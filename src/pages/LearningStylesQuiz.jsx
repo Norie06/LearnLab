@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import "../App.css";
 import QuizQuestion from "../components/QuizQuestion";
 import "./LearningStylesQuiz.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function LearningStylesQuiz() {
   const [quizData, setQuizData] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({}); // Track selected answers
+  //const [isReadyToNavigate, setIsReadyToNavigate] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/content/learningstylesQuiz.json")
@@ -25,6 +27,11 @@ function LearningStylesQuiz() {
       return updatedAnswers;
     });
   };
+
+  const handleSubmit = () => {
+    console.log("Passing Selected Answers:", selectedAnswers); // Debug log
+    navigate("/tests/learning-styles/results", { state: selectedAnswers });
+  }
 
   return (
     <div id="learning_styles_quiz" className="page">
@@ -47,18 +54,28 @@ function LearningStylesQuiz() {
             </li>
           ))}
         </ul>
-        <Link
-          to={{
-            pathname: "/tests/learning-styles/results",
-            state: { selectedAnswers },
-          }}
-          onClick={() => console.log("Passing Selected Answers:", selectedAnswers)} // Debug log
-        >
-          <button id="submit_quiz" className="button">Submit</button>
-        </Link>
+          <button id="submit_quiz" className="button" onClick={handleSubmit}>
+            Submit
+          </button>
+        {/* {isReadyToNavigate ? (
+          <Link to={{
+                pathname: "/tests/learning-styles/results",
+              state: { selectedAnswers }
+            }}
+            onClick={() => console.log("Passing Selected Answers:", selectedAnswers)} // Debug log
+          >
+            <button id="submit_quiz" className="button">Submit</button>
+          </Link>
+        ) : (
+          <button id="submit_quiz" className="button" onClick={handleSubmit}>
+            Submit
+          </button>
+        )} */}
       </main>
     </div>
   );
 }
 
 export default LearningStylesQuiz;
+
+/* Note! The path is changed after the request is made!! */

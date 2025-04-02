@@ -12,21 +12,25 @@ import {
   Legend,
 } from "chart.js";
 import "../App.css";
+import "./LearningStylesResults.css"
 
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 function LearningStylesResults() {
+  
   const location = useLocation();
-  const { selectedAnswers } = location.state || {}; // Extract selectedAnswers from state
+  const selectedAnswers = location.state;
   console.log("Received Selected Answers in Results:", selectedAnswers); // Debug log
+
+
   const [markdownContent, setMarkdownContent] = useState("");
-  const [chartData, setChartData] = useState(null); // State for chart data
+  const [chartData, setChartData] = useState(null); // State for chart data*/
 
   const evaluateAnswers = (answers) => {
     if (!answers || Object.keys(answers).length === 0) {
       console.error("No answers provided for evaluation.");
-      return { learningStyle: "unknown", counts: null }; // Return default values if answers are missing
+      return { learningStyle: "unknown", counts: { visual: 0, auditory: 0, kinesthetic: 0, reading: 0 } }; // Return default values if answers are missing
     }
 
     const counts = { visual: 0, auditory: 0, kinesthetic: 0, reading: 0 };
@@ -101,43 +105,45 @@ function LearningStylesResults() {
       <header className="hero">
         <h1>Learning Styles Test Results</h1>
       </header>
-      <h2>Understanding Your Learning Style</h2>
-      <p>
-        Many people have a mix of learning styles! Use this quiz to identify
-        your strengths and combine techniques for a more effective study
-        experience. Try incorporating strategies from other learning styles to
-        see what works best for you. For more tips and tools tailored to your
-        learning style, visit the LearnLab{" "}
-        <a href="/resource-hub">Resource Hub</a>.
-      </p>
-      <div>
-        {learningStyle === "unknown" ? (
-          <p>No results available. Please complete the quiz first.</p>
-        ) : (
-          <>
-            <ReactMarkdown>{markdownContent}</ReactMarkdown>
-            {chartData && (
-              <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-                <Bar
-                  data={chartData}
-                  options={{
-                    responsive: true,
-                    plugins: {
-                      legend: {
-                        position: "top",
+      <main>
+        <h2>Understanding Your Learning Style</h2>
+        <p>
+          Many people have a mix of learning styles! Use this quiz to identify
+          your strengths and combine techniques for a more effective study
+          experience. Try incorporating strategies from other learning styles to
+          see what works best for you. For more tips and tools tailored to your
+          learning style, visit the LearnLab{" "}
+          <a href="/resource-hub">Resource Hub</a>.
+        </p>
+        <div>
+          {learningStyle === "unknown" ? (
+            <p>No results available. Please complete the quiz first.</p>
+          ) : (
+            <>
+              <ReactMarkdown>{markdownContent}</ReactMarkdown>
+              {chartData && (
+                <div className="chart-container">
+                  <Bar
+                    data={chartData}
+                    options={{
+                      responsive: true,
+                      plugins: {
+                        legend: {
+                          position: "top",
+                        },
+                        title: {
+                          display: true,
+                          text: "Learning Style Scores",
+                        },
                       },
-                      title: {
-                        display: true,
-                        text: "Learning Style Scores",
-                      },
-                    },
-                  }}
-                />
-              </div>
-            )}
-          </>
-        )}
-      </div>
+                    }}
+                  />
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </main>
     </div>
   );
 }
