@@ -3,18 +3,78 @@
   margin-top: 20px;
 }
 
+#learning_styles_results main p {
+  text-align: justify;
+}
+
 #learning_styles_results h2 {
   margin: 0;
   align-self: flex-start;
+}
+
+.chart-and-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Add space between the text and the chart */
+}
+
+.chart-and-list ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.learning-styles-list {
+  justify-content: center;
+  height: 100%;
 }
 
 /* Center the chart and set a max width */
 .chart-container {
   display: flex;
   justify-content: center;
-  width: 100%
+  width: 60%;
+  justify-self: center;
+  padding: 4%
 }
 
-.chart-container canvas {
-  width: 100%; /* Ensure the chart takes up the full width of the container */
+.container {
+  width: 100%;
+}
+
+.markdown-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.markdown-section h1 {
+  margin-top: 30px;
+}
+
+.markdown-section img {
+  padding: 3%;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.visual {
+  color: rgba(27, 99, 151, 1);
+}
+
+.kinesthetic {
+  color: rgba(241, 124, 116, 1);
+}
+
+.auditory {
+  color: rgba(108, 180, 98, 1);
+}
+
+.reading {
+  color: rgba(205, 200, 50, 1);
 }

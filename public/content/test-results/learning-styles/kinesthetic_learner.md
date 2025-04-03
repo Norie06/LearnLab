@@ -1,9 +1,8 @@
-# 4. Kinesthetic Learner  
 **You're a Kinesthetic Learning Keymaster!**  
 
 You learn best through **hands-on experience** and **physical interaction**. You thrive when you can engage in experiments, role-playing, or real-world applications of concepts.  
 
-## Study Tips for Kinesthetic Learners:  
+### Study Tips for Kinesthetic Learners:  
 - Engage in **experiments**, **simulations**, or practical exercises  
 - Use **real-life examples**, case studies, or hands-on activities  
 - Move while studying—try walking while reading or using gestures  

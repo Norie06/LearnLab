@@ -11,7 +11,7 @@
     align-items: start;
     justify-items: start;
     text-align: justify;
-    width: fill-available;
+    width: stretch;
 }
 
 #about .bold {
