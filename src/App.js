@@ -45,7 +45,7 @@ function App() {
   return (
     <div id="App">
       <nav>
-        <ul id='placeholder'></ul>
+        <ul className='placeholder' id='placeholder_1'></ul>
         <ul id='main_pages'>
           <li className={location.pathname === '/' ? 'active-link' : ''}>
             <NavLink to="/">Home</NavLink>
@@ -63,6 +63,7 @@ function App() {
             <NavLink to="/about">About</NavLink>
           </li>
         </ul>
+        <ul className='placeholder' id='placeholder_2'></ul>
         <ul>
           <li className={location.pathname === '/log-in' ? 'active-link' : ''}>
             <NavLink to="/log-in">Log In</NavLink>

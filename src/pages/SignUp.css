@@ -1,3 +1,22 @@
+#signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 28%;
+    min-width: 300px;
+    align-content: end;
+    margin: 15px;
+    margin-top: 65px;
+    padding: 20px 30px 20px 30px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Kalam';
+    font-size: 1.1em;
+    border-radius: 70px;
+    text-align: left;
+}
+
 .hide {
     display: none;
 }
@@ -20,7 +39,9 @@ label {
     align-content: end;
     align-items: center;
     justify-content: right;
+    /*min-width: fit-content;*/
     width: 45%;
+    text-align: right;
 }
 
 input {
@@ -41,34 +62,20 @@ input:focus {
     outline: none;
 }
 
-#signup {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    align-content: end;
-    margin-top: 5%;
-    padding: 2%;
-    background-color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    font-family: 'Kalam';
-    font-size: 1.1em;
-    border-radius: 70px;
-}
 
 #signup h2 {
     font-size: 2.5em;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 0;
 }
 
 #signup button {
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-family: 'Kalam';
-    width: 60%;
+    width: 50%;
     align-self: center;
-    padding: 5px;
+    padding: 4px;
     margin-top: 10px;
 }
 
@@ -106,4 +113,8 @@ input:focus {
     margin-top: 20px;
     font-family: 'Inter', sans-serif;
     font-size: 0.8em;
+}
+
+#pwdnote, #uidnote, #confirmnote {
+    padding-left: 10px;
 }

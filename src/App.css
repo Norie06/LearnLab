@@ -50,7 +50,6 @@ header {
 
 
 /* ### Navigation bar settings */
-
 nav {
   position: fixed; /* Fix the nav bar at the top */
   top: 0;
@@ -73,20 +72,14 @@ nav ul {
   margin: 0;
   text-align: center;
   width: 30%;
+  gap: 15px;
 }
 
-#placeholder {
+.placeholder {
+  min-width: 15px;
   width: 30%;
   display: flex;
   justify-content: flex-start;
-}
-
-nav ul:last-child {
-  width: 30%;
-  display: flex;
-  align-content: flex-end;
-  justify-content: flex-end;
-  list-style: none;
 }
 
 #main_pages {
@@ -98,13 +91,22 @@ nav ul:last-child {
   margin: 0;
 }
 
+nav ul:last-child {
+  min-width: fit-content;
+  width: 30%;
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+  list-style: none;
+}
+
 nav ul li {
-  margin: 0 15px;
   justify-content: center;
   text-align: center;
   align-content: center;
   border-radius: 10px;
   transition: 0.3s ease, box-shadow 0.3s ease;
+  min-width: min-content;
   padding: 5px 10px;
 }
 
@@ -117,6 +119,64 @@ nav ul li a {
 nav ul li:hover {
   transform: scale(1.1);
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 725px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(197,223,226,255), aliceblue, rgba(197,223,226,255)); /* Gradient with white center */
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin: 0; /* Ensure no margin is applied */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the nav bar */
+    z-index: 1000;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  #main_pages {
+    display: flex;
+    justify-content: none;
+    flex: 1;
+    list-style: none;
+    min-width: fit-content;
+  }
+
+  nav ul:last-child {
+    min-width: fit-content;
+    width: 30%;
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    list-style: none;
+  }
+
+  .placeholder {
+    display: none;
+  }
+  
+  nav ul li {
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    min-width: min-content;
+    padding: 10px 10px;
+  }
+  
 }
 
 .active-link {
