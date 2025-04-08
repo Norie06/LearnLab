@@ -126,8 +126,8 @@ nav ul li a {
 }
 
 nav ul li:hover {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transform: scale(1.1);
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 } 
 
 @media (max-width: 740px) {
@@ -353,36 +353,16 @@ button {
   /* Inside auto layout */
   flex: none;
   flex-grow: 0;
-  color: white;
+  color: #E3E3E3;
   cursor: pointer;
-  text-decoration: none;
   text-decoration: none;
   transition: 0.2s ease;
 }
 
-button:hover {
-    /* Button */
-  
-    box-sizing: border-box;
-  
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  
+button:hover {  
     background: #E3E3E3;
     border: 1px solid #767676;
-    border-radius: 8px;
-  
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  
     color: #2C2C2C;
-    text-decoration: none;
-  
 }
 
 button img {

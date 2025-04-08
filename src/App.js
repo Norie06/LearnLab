@@ -15,6 +15,10 @@ import NoteTaking from './pages/NoteTaking';
 import NoteTakingResults from './pages/NoteTakingResults';
 import PretendLecture from './pages/PretendLecture';
 import ResourceHubSubpage from './pages/ResourceHubSubpage';
+import LectureVideo from './components/LectureVideo';
+import LectureQuiz from './components/LectureQuiz';
+import LectureResults from './components/LectureResults';
+import LectureFinalResults from './components/LectureFinalResults';
 
 import ScrollToTop from './components/ScrollToTop';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
@@ -98,6 +102,10 @@ function App() {
           <Route path="/tests/note-taking" element={<NoteTaking />}/>
           <Route path="/tests/note-taking/results" element={<NoteTakingResults />}/>
           <Route path="/tests/pretend-lecture" element={<PretendLecture />}/>
+          <Route path="/pretend-lecture/:videoId/video" element={<LectureVideo />} />
+          <Route path="/pretend-lecture/:videoId/quiz" element={<LectureQuiz />} />
+          <Route path="/pretend-lecture/:videoId/results" element={<LectureResults />} />
+          <Route path="/pretend-lecture/final-results" element={<LectureFinalResults />} />
         </Routes>
         <footer>
           <div id="footer_links">
