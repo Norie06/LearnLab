@@ -1,4 +1,4 @@
-**You're an Aural Learning Ace!**  
+## **You're an Aural Learning Ace!**  
 
 You learn best through **listening and speaking**. You retain information more effectively when it's presented verbally, and you benefit from discussions, lectures, and audio recordings.  
 

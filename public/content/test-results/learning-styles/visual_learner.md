@@ -1,4 +1,4 @@
-**You're a Visual Learning Virtuoso!**  
+## **You're a Visual Learning Virtuoso!**  
 
 You learn best through images, diagrams, charts, and spatial organization. You thrive when information is presented visually, and you can easily recall information by visualizing it in your mind.  
 

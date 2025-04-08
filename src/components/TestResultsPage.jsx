@@ -13,7 +13,7 @@ import {
 } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import "../App.css";
-import "./TestResults.css";
+import "./LearningStylesResults.css";
 
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, ArcElement, Title, Tooltip, Legend);
@@ -24,7 +24,7 @@ function LearningStylesResults() {
   const [markdownContents, setMarkdownContents] = useState([]); // Array to store Markdown content
   const [chartData, setChartData] = useState(null); // State for chart data
   
-  
+
   const evaluateAnswers = (answers) => {
     if (!answers || Object.keys(answers).length === 0) {
       console.error("No answers provided for evaluation.");
@@ -111,7 +111,7 @@ function LearningStylesResults() {
   }, [sortedStyles, counts]);
 
   return (
-    <div id="learning_styles_results" className="page results-page">
+    <div id="learning_styles_results" className="page">
       <header className="hero">
         <h1>Learning Styles Test Results</h1>
       </header>
@@ -131,7 +131,7 @@ function LearningStylesResults() {
           ) : (
             <div className="content">
               <div className="chart-and-list">
-                <div className="results-list">
+                <div className="learning-styles-list">
                   <h2>Your Learning Style Is:</h2>
                   <ul>
                     {sortedStyles.map((style) => {

@@ -1,13 +1,25 @@
-#learning_styles_results main {
+.results-page main {
   width: 50%;
   margin-top: 20px;
 }
 
-#learning_styles_results main p {
+.results-page main p {
   text-align: justify;
 }
 
-#learning_styles_results h2 {
+.markdown-section h1 {
+  margin-bottom: 5px;
+  margin-top: 30px;
+
+  justify-self: center;
+}
+.results-page h2 {
+  margin: 0;
+  justify-self: center;
+  font-size: 1.2em;
+}
+
+.results-page h3 {
   margin: 0;
   align-self: flex-start;
 }
@@ -26,7 +38,7 @@
   font-weight: 600;
 }
 
-.learning-styles-list {
+.results-list {
   justify-content: center;
   height: 100%;
 }
@@ -50,9 +62,6 @@
   justify-content: center;
 }
 
-.markdown-section h1 {
-  margin-top: 30px;
-}
 
 .markdown-section img {
   padding: 3%;
@@ -67,7 +76,14 @@
   color: rgba(27, 99, 151, 1);
 }
 
+.cornell {
+  color: rgba(27, 99, 151, 1);
+}
+
 .kinesthetic {
+  color: rgba(241, 124, 116, 1);
+}
+.mind_maps {
   color: rgba(241, 124, 116, 1);
 }
 
@@ -75,6 +91,14 @@
   color: rgba(108, 180, 98, 1);
 }
 
+.sketchnotes {
+  color: rgba(108, 180, 98, 1);
+}
+
 .reading {
+  color: rgba(205, 200, 50, 1);
+}
+
+.outline {
   color: rgba(205, 200, 50, 1);
 }

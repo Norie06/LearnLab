@@ -19,25 +19,25 @@ import "./TestResults.css";
 ChartJS.register(CategoryScale, LinearScale, ArcElement, Title, Tooltip, Legend);
 ChartJS.register(ChartDataLabels);
 
-function LearningStylesResults() {
+function NoteTakingResults() {
   const location = useLocation();
   const [markdownContents, setMarkdownContents] = useState([]); // Array to store Markdown content
   const [chartData, setChartData] = useState(null); // State for chart data
   
-  
+
   const evaluateAnswers = (answers) => {
     if (!answers || Object.keys(answers).length === 0) {
       console.error("No answers provided for evaluation.");
-      return { sortedStyles: [], counts: { visual: 0, auditory: 0, kinesthetic: 0, reading: 0 } };
+      return { sortedStyles: [], counts: { cornell: 0, mind_maps: 0, sketchnotes: 0, outline: 0 } };
     }
 
-    const counts = { visual: 0, auditory: 0, kinesthetic: 0, reading: 0 };
+    const counts = { cornell: 0, mind_maps: 0, sketchnotes: 0, outline: 0 };
 
     Object.values(answers).forEach((answerIndex) => {
-      if (answerIndex === 0) counts.visual++;
-      else if (answerIndex === 1) counts.auditory++;
-      else if (answerIndex === 2) counts.reading++;
-      else if (answerIndex === 3) counts.kinesthetic++;
+      if (answerIndex === 0) counts.outline++;
+      else if (answerIndex === 1) counts.mind_maps++;
+      else if (answerIndex === 2) counts.sketchnotes++;
+      else if (answerIndex === 3) counts.cornell++;
     });
 
     // Sort learning styles by their scores in descending order
@@ -55,16 +55,16 @@ function LearningStylesResults() {
   useEffect(() => {
     if (sortedStyles.length === 0) return; // Skip fetching if no styles are available
     const titles = {
-      visual: "Visual",
-      auditory: "Aural (Auditory)",
-      reading: "Reading/Writing",
-      kinesthetic: "Kinesthetic",
+      cornell: "Cornell Notes",
+      mind_maps: "Mind Maps",
+      sketchnotes: "Sketchnotes",
+      outline: "Outline Method",
     };
 
     const fetchMarkdownFiles = async () => {
       try {
         const markdownPromises = sortedStyles.map(async (style) => {
-          const response = await fetch(`/content/test-results/learning-styles/${style}_learner.md`);
+          const response = await fetch(`/content/test-results/note-taking/${style}.md`);
           const text = await response.text();
           return { style, content: text, title: titles[style] }; // Return both the style and its content
         });
@@ -81,15 +81,15 @@ function LearningStylesResults() {
     // Prepare chart data
     if (counts) {
       setChartData({
-        labels: ["Visual", "Aural", "Reading", "Kinesthetic"],
+        labels: ["Cornell", "Mind Maps", "Sketchnotes", "Outline"],
         datasets: [
           {
-            label: "Learning Style Scores",
+            label: "Note Taking Scores",
             data: [
-              counts.visual,
-              counts.auditory,
-              counts.reading,
-              counts.kinesthetic,
+              counts.cornell,
+              counts.mind_maps,
+              counts.sketchnotes,
+              counts.outline,
             ],
             backgroundColor: [
               "rgba(27, 99, 151, 0.8)", // Visual
@@ -111,18 +111,18 @@ function LearningStylesResults() {
   }, [sortedStyles, counts]);
 
   return (
-    <div id="learning_styles_results" className="page results-page">
+    <div id="note-taking_results" className="page results-page">
       <header className="hero">
-        <h1>Learning Styles Test Results</h1>
+        <h1>Note-Taking Test Results</h1>
       </header>
       <main>
-        <h2>Understanding Your Learning Style</h2>
+        <h2>Understanding Note-Taking Style</h2>
         <p style={{textAlign: "justify"}}>
-          Many people have a mix of learning styles! Use this quiz to identify
+          Many people have a mix of note-taking styles! Use this quiz to identify
           your strengths and combine techniques for a more effective study
-          experience. Try incorporating strategies from other learning styles to
+          experience. Try incorporating strategies from other note-taking styles to
           see what works best for you. For more tips and tools tailored to your
-          learning style, visit the LearnLab{" "}
+          note-taking style, visit the LearnLab{" "}
           <a href="/resource-hub">Resource Hub</a>.
         </p>
         <div className="container">
@@ -132,7 +132,7 @@ function LearningStylesResults() {
             <div className="content">
               <div className="chart-and-list">
                 <div className="results-list">
-                  <h2>Your Learning Style Is:</h2>
+                  <h2>Your Note-Taking Style Is:</h2>
                   <ul>
                     {sortedStyles.map((style) => {
                       const totalScore = Object.values(counts).reduce((sum, value) => sum + value, 0);
@@ -179,17 +179,15 @@ function LearningStylesResults() {
               {markdownContents.map((markdown, index) => {
                 const totalScore = Object.values(counts).reduce((sum, value) => sum + value, 0);
                 const percentage = ((counts[markdown.style] / totalScore) * 100).toFixed(0);
-                const imageSrc = `/images/${markdown.style}.svg`;
 
                 return (
                   <div key={index} className="markdown-section">
                     <div className="markdown-content">
                       <h1>
-                        {markdown.title} Learner ({percentage}%)
+                        {markdown.title} ({percentage}%)
                       </h1>
                       <ReactMarkdown>{markdown.content}</ReactMarkdown>
                     </div>
-                    <img src={imageSrc} alt={`${markdown.title} illustration`} className="style-image" />
                   </div>
                 );
               })}
@@ -201,4 +199,4 @@ function LearningStylesResults() {
   );
 }
 
-export default LearningStylesResults;
+export default NoteTakingResults;

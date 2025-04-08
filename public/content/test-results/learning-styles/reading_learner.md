@@ -1,4 +1,4 @@
-**You're a Reading/Writing Rockstar!**  
+## **You're a Reading/Writing Rockstar!**  
 
 You learn best through **text-based materials**. You prefer reading, writing, and organizing information in written form, and you excel at summarizing and analyzing text.  
 

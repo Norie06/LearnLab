@@ -12,6 +12,7 @@ import SignIn from './pages/SignIn';
 import LearningStyles from './pages/LearningStylesQuiz';
 import LearningStylesResults from './pages/LearningStylesResults';
 import NoteTaking from './pages/NoteTaking';
+import NoteTakingResults from './pages/NoteTakingResults';
 import PretendLecture from './pages/PretendLecture';
 import ResourceHubSubpage from './pages/ResourceHubSubpage';
 
@@ -63,8 +64,8 @@ function App() {
             <NavLink to="/about">About</NavLink>
           </li>
         </ul>
-        <ul className='placeholder' id='placeholder_2'></ul>
         <ul>
+          <li className='placeholder' id='placeholder_2'></li>
           <li className={location.pathname === '/log-in' ? 'active-link' : ''}>
             <NavLink to="/log-in">Log In</NavLink>
           </li>
@@ -95,6 +96,7 @@ function App() {
           <Route path="/tests/learning-styles" element={<LearningStyles />}/>
           <Route path="/tests/learning-styles/results" element={<LearningStylesResults />}/>
           <Route path="/tests/note-taking" element={<NoteTaking />}/>
+          <Route path="/tests/note-taking/results" element={<NoteTakingResults />}/>
           <Route path="/tests/pretend-lecture" element={<PretendLecture />}/>
         </Routes>
         <footer>
