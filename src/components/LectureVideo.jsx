@@ -8,24 +8,28 @@ function LectureVideo() {
   const navigate = useNavigate();
   const { videoId } = useParams();
   const [hasWatchedVideo, setHasWatchedVideo] = useState(false);
+  const [hasClickedSlides, setHasClickedSlides] = useState(false); // New state to track if slides were clicked
   const [showVideo, setShowVideo] = useState(false);
+  const [videoDisabled, setVideoDisabled] = useState(false); // New state to disable video
 
   const handleVideoComplete = () => {
     setHasWatchedVideo(true);
+    setVideoDisabled(true); // Disable the video after it has been watched
   };
 
   const handleContinue = () => {
-    navigate(`/pretend-lecture/quiz/${videoId}`);
+    navigate(`/tests/pretend-lecture/${videoId}/quiz`);
   };
 
-  const handleShowVideo = () => {
-    setShowVideo(true);
-  }
+  const handleSlidesClick = () => {
+    setHasClickedSlides(true);
+    setShowVideo(true); // Show video when slides are clicked
+  };
 
   const videoIds = {
     '1': 'b_H0V1-kQbE', // Preview slides before lecture
-    '2': 'VIDEO_ID_2',  // See slides after lecture
-    '3': 'VIDEO_ID_3'   // No slides access
+    '2': 'uKxRYH1ZC5I',  // See slides after lecture
+    '3': 'VBifDZwPiI4'   // No slides access
   };
 
   const videoTitles = {
@@ -39,6 +43,7 @@ function LectureVideo() {
     width: '640',
     playerVars: {
       autoplay: 0,
+      disablekb: videoDisabled ? 1 : 0, // Disable keyboard controls if video is disabled
     },
   };
 
@@ -48,7 +53,7 @@ function LectureVideo() {
         return (
           <>
             <p><b>First, your task is to read the slides before watching the presentation.</b></p>
-            <button className="slides-button" onClick={handleShowVideo}>
+            <button className="slides-button" onClick={handleSlidesClick}>
               <a href={`https://drive.google.com/file/d/13ut-2mQhXyEReIhTPrVrc8fUrjsAK7o7/view`} target="_blank" rel="noopener noreferrer">
                 <img src="/images/star-white.svg" alt="star icon" />
                 Slides
@@ -63,6 +68,11 @@ function LectureVideo() {
                     videoId={videoIds[videoId]}
                     opts={opts}
                     onEnd={handleVideoComplete}
+                    onStateChange={(e) => {
+                      if (videoDisabled && e.data === 1) {
+                        e.target.stopVideo(); // Stop the video if it's disabled
+                      }
+                    }}
                   />
                 </div>
                 <p style={{justifySelf: 'center'}}>-- You can only proceed when you have watched the video <b>all the way</b> through. --</p>
@@ -76,20 +86,27 @@ function LectureVideo() {
       case '2': // See slides after watching lecture
         return (
           <>
-            <p><b>First, watch the video lecture. Try to remember as much information as you can.</b></p>
+            <p><b>First, your task is to listen to a video lecture about Needs, Goods, Services, Scarcity, and Choice. Try to remember as much information as you can. You are allowed to watch the video once. </b></p>
             <div className="video-container">
               <YouTube
                 videoId={videoIds[videoId]}
                 opts={opts}
                 onEnd={handleVideoComplete}
+                onStateChange={(e) => {
+                  if (videoDisabled && e.data === 1) {
+                    e.target.stopVideo(); // Stop the video if it's disabled
+                  }
+                }}
               />
             </div>
             {hasWatchedVideo && (
               <>
                 <p><b>Now you can review the slides from the presentation.</b></p>
-                <button className="slides-button">
-                  <a href={`/content/lecture${videoId}Slides.pdf`} target="_blank" rel="noopener noreferrer">
-                    View Slides
+                <button className="slides-button" onClick={handleSlidesClick}>
+                  <a href={`https://drive.google.com/file/d/13ut-2mQhXyEReIhTPrVrc8fUrjsAK7o7/view`} target="_blank" rel="noopener noreferrer">
+                    <img src="/images/star-white.svg" alt="star icon" />
+                      Slides
+                    <img src="/images/star-white.svg" alt="star icon" />
                   </a>
                 </button>
               </>
@@ -98,14 +115,22 @@ function LectureVideo() {
         );
       
       case '3': // No slides access
+        if (!hasClickedSlides) {
+          setHasClickedSlides(true); // Set to true when the button is clicked
+        }
         return (
           <>
-            <p><b>Watch the video lecture. Try to remember as much information as you can.</b></p>
+            <p>First, your task is to listen to a video lecture about <b>Cognitive Development Stages</b>. Try to <b>remember</b> as much information as you can. You are allowed to watch the video <b>once</b>. When you finish, <b>press the NEXT button</b> (only available after watching the video <b>all the way through</b>).</p>
             <div className="video-container">
               <YouTube
                 videoId={videoIds[videoId]}
                 opts={opts}
                 onEnd={handleVideoComplete}
+                onStateChange={(e) => {
+                  if (videoDisabled && e.data === 1) {
+                    e.target.stopVideo(); // Stop the video if it's disabled
+                  }
+                }}
               />
             </div>
           </>
@@ -124,7 +149,7 @@ function LectureVideo() {
       <main>
         <div className="container">
           {renderContent()}
-          {hasWatchedVideo && (
+          {hasWatchedVideo && hasClickedSlides && (
             <button className="button" onClick={handleContinue}>
               <img src="/images/star-white.svg" alt="star icon" />
               Next

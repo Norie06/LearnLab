@@ -1,6 +1,7 @@
 #quizzes {
   align-items: center;
   justify-items: center;
+  gap: 50px;
 }
 
 #quizzes main {
@@ -20,3 +21,11 @@
   align-self: flex-start;
 }
 
+.choose_quiz {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8%;
+  width: 100%;
+}

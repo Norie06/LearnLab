@@ -1,5 +1,4 @@
 import "../App.css";
-import "./LearningStylesQuiz.css"
 import TestPage from "../components/TestPage";
 
 function NoteTaking() {
@@ -8,6 +7,8 @@ function NoteTaking() {
       content_file="noteTakingQuiz.json"
       title="Discover your note-taking style!"
       url="note-taking"
+      instructions="Read each statement carefully and choose the option that best describes you."
+      pageid="note-taking-test"
     />
   )
   // const [quizData, setQuizData] = useState([]); // State to store the quiz data

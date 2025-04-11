@@ -1,18 +1,29 @@
+.test-page main {
+  min-width: 400px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
 #styles_question_list {
   list-style: none;
   gap: 50px;  
+  min-width: 400px;
+  width: 60%;
 }
 
-#learning_styles_quiz main {
-  width: 50%;
-}
 
 #styles_question_list button {
   background-color: whitesmoke;
+  padding: 0;
 }
 
 #styles_question_list button img {
   transition: 0.2s ease;
+  width: 75%;
 }
 #styles_question_list button:hover img {
   filter: none;
@@ -21,4 +32,6 @@
 #submit_quiz {
   margin-top: 10px;
   padding: 10px 20px;
+  align-self: center;
+  justify-self: center;
 }

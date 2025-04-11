@@ -102,10 +102,10 @@ function App() {
           <Route path="/tests/note-taking" element={<NoteTaking />}/>
           <Route path="/tests/note-taking/results" element={<NoteTakingResults />}/>
           <Route path="/tests/pretend-lecture" element={<PretendLecture />}/>
-          <Route path="/pretend-lecture/:videoId/video" element={<LectureVideo />} />
-          <Route path="/pretend-lecture/:videoId/quiz" element={<LectureQuiz />} />
-          <Route path="/pretend-lecture/:videoId/results" element={<LectureResults />} />
-          <Route path="/pretend-lecture/final-results" element={<LectureFinalResults />} />
+          <Route path="/tests/pretend-lecture/:videoId/video" element={<LectureVideo />} />
+          <Route path="/tests/pretend-lecture/:videoId/quiz" element={<LectureQuiz />} />
+          <Route path="/tests/pretend-lecture/:videoId/results" element={<LectureResults />} />
+          <Route path="/tests/pretend-lecture/final-results" element={<LectureFinalResults />} />
         </Routes>
         <footer>
           <div id="footer_links">

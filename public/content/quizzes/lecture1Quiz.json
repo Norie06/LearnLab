@@ -8,7 +8,7 @@
         "A temporary blockage of blood flow",
         "A heart valve disorder"
       ],
-      "correct_answer": "A condition where arteries thicken and lose flexibility"
+      "correct_answer": 0
     },
     {
       "question": "Which condition occurs when plaque builds up in the arteries, leading to narrowing?",
@@ -18,7 +18,7 @@
         "Angina",
         "Pericarditis"
       ],
-      "correct_answer": "Atherosclerosis"
+      "correct_answer": 1
     },
     {
       "question": "Which of the following is NOT a risk factor for heart disease?",
@@ -28,7 +28,7 @@
         "Low blood pressure",
         "Diabetes"
       ],
-      "correct_answer": "Low blood pressure"
+      "correct_answer": 2
     },
     {
       "question": "What is the most serious complication of angina?",
@@ -38,7 +38,7 @@
         "Heart attack",
         "Coronary bypass"
       ],
-      "correct_answer": "Heart attack"
+      "correct_answer": 2
     },
     {
       "question": "Which diagnostic test is used to visualize blocked arteries?",
@@ -48,7 +48,7 @@
         "Stress test",
         "Electrocardiogram"
       ],
-      "correct_answer": "Coronary angiography"
+      "correct_answer": 1
     },
     {
       "question": "Which treatment involves rerouting blood flow around a blocked artery?",
@@ -58,7 +58,7 @@
         "Pacemaker insertion",
         "Stent placement"
       ],
-      "correct_answer": "Coronary artery bypass graft (CABG)"
+      "correct_answer": 0
     },
     {
       "question": "What symptom is most commonly associated with angina?",
@@ -68,7 +68,7 @@
         "Leg swelling",
         "Chronic cough"
       ],
-      "correct_answer": "Chest pain or discomfort"
+      "correct_answer": 1
     },
     {
       "question": "Which lifestyle change can reduce heart disease risk?",
@@ -78,7 +78,7 @@
         "Managing stress and quitting smoking",
         "Increasing sodium intake"
       ],
-      "correct_answer": "Managing stress and quitting smoking"
+      "correct_answer": 2
     },
     {
       "question": "What is a common diagnostic test for heart disease?",
@@ -88,7 +88,7 @@
         "Liver function test",
         "Vision test"
       ],
-      "correct_answer": "Blood test (troponin levels)"
+      "correct_answer": 1
     },
     {
       "question": "Atherosclerosis can lead to all of the following EXCEPT:",
@@ -98,7 +98,7 @@
         "Hypertension",
         "Diabetes"
       ],
-      "correct_answer": "Diabetes"
+      "correct_answer": 3
     }
   ]
 }

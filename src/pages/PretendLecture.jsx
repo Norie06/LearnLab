@@ -16,7 +16,7 @@ function PretendLecture() {
   ];
 
   const handleLectureSelect = (id) => {
-    navigate(`/pretend-lecture/${id}/video`);
+    navigate(`/tests/pretend-lecture/${id}/video`);
   };
 
   return (

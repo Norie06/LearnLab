@@ -11,6 +11,7 @@ html, body {
   width: 100%;
   height: 100%; /* Ensure the body takes the full height of the viewport */
   overflow-x: hidden; /* Prevent horizontal overflow */
+  font-size: 0.9em;
 }
 
 /* ## Styling the App itself */
@@ -44,7 +45,6 @@ header {
   align-items: center;
   font-size: calc(5px + 2vmin);
   width: 100%;
-  padding-top: 60px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Adds a blurred shadow around the border */
 }
 
@@ -56,7 +56,7 @@ nav {
   left: 0;
   width: 100%;
   background: linear-gradient(to bottom, rgba(197,223,226,255), aliceblue, rgba(197,223,226,255)); /* Gradient with white center */
-  padding: 20px 15px;
+  padding: 15px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -190,6 +190,7 @@ nav ul li:hover {
 
 .active-link {
   background-color: aliceblue;
+  border-radius: 50px;
   box-shadow: 0 0 8px rgba(80, 107, 110); /* Adds a blurred shadow around the border */
 }
 
@@ -260,7 +261,7 @@ footer {
   align-items: center;
   margin-bottom: 40px;
   padding-top: 110px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .hero h1 {
@@ -331,7 +332,6 @@ footer {
   align-content: center;
   width: 100%;
   height: 100%;
-  margin-top: 35px;
 }
 
 Link {
@@ -347,9 +347,9 @@ button {
   align-items: center; /* Center items horizontally */
   text-align: center; /* Ensure text is centered */
   gap: 20px;
-  background: #2C2C2C;
-  border: 1px solid #2C2C2C;
-  border-radius: 8px;
+  background: #282c34;
+  border: 1px solid #282c34;
+  border-radius: 50px;
   /* Inside auto layout */
   flex: none;
   flex-grow: 0;
@@ -357,12 +357,13 @@ button {
   cursor: pointer;
   text-decoration: none;
   transition: 0.2s ease;
+  padding: 10px 20px; /* Add padding for better spacing */
 }
 
 button:hover {  
     background: #E3E3E3;
     border: 1px solid #767676;
-    color: #2C2C2C;
+    color: #282c34;
 }
 
 button img {
@@ -371,6 +372,17 @@ button img {
 
 button:hover img {
   filter: invert(90%)
+}
+
+button a {
+  color: #E3E3E3;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+button:hover a {
+  color: #2C2C2C;
+  text-decoration: none;
 }
 
 .loading-screen {
@@ -384,4 +396,22 @@ button:hover img {
   top: 0;
   left: 0;
   z-index: 9999; /* Ensure it appears above all other content */
+}
+
+h1 {
+  color: #282c34
+}
+
+h2 {
+  color: #282c34
+}
+
+h3 {
+  color: #282c34
+}
+h4 {
+  color: #282c34
+}
+p {
+  color: #282c34
 }

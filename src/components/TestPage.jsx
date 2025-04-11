@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import "../App.css";
 import QuizQuestion from "../components/QuizQuestion";
 import { useNavigate } from "react-router-dom";
+import "./TestPage.css";
 
-function TestPage({content_file, title, url}) {
+function TestPage({content_file, title, url, instructions, pageid}) {
   const [quizData, setQuizData] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({}); 
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`/content/${content_file}`)
+    fetch(`/content/quizzes/${content_file}`)
       .then((response) => response.json())
       .then((data) => setQuizData(data.questions))
       .catch((error) => console.error("Error fetching quiz data:", error));
@@ -32,12 +33,12 @@ function TestPage({content_file, title, url}) {
   }
 
   return (
-    <div id={`${url}-quiz`} className="page">
+    <div id={`${pageid}`} className="page test-page">
       <header className="hero">
         <h1>{title}</h1>
       </header>
       <main>
-        <p>Read each statement carefully and choose the option that best describes you.</p>
+        <p>{instructions}</p>
         <ul id="styles_question_list">
           {quizData.map((quizItem, index) => (
             <li key={index}>
@@ -52,9 +53,9 @@ function TestPage({content_file, title, url}) {
             </li>
           ))}
         </ul>
-          <button id="submit_quiz" className="button" onClick={handleSubmit}>
-            Submit
-          </button>
+        <button id="submit_quiz" className="button" onClick={handleSubmit}>
+          Submit
+        </button>
       </main>
     </div>
   );

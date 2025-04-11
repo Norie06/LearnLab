@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following is an example of a basic need?",
+      "answers": [
+        "A luxury car",
+        "Designer clothes",
+        "Water and shelter",
+        "A vacation"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "How do needs differ from wants?",
+      "answers": [
+        "Needs are optional; wants are essential",
+        "Needs are necessary for survival, while wants are desires",
+        "Needs change frequently; wants remain constant",
+        "Needs are infinite, while wants are limited"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "Which of the following is an example of an economic good?",
+      "answers": [
+        "Air",
+        "Tap water",
+        "National defense",
+        "A free sunset view"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "Which of the following is an example of a public good?",
+      "answers": [
+        "A new smartphone",
+        "A private swimming pool",
+        "Streetlights",
+        "A restaurant meal"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "What makes services different from goods?",
+      "answers": [
+        "Services are tangible, and goods are intangible",
+        "Services can be stored for later use",
+        "Services are perishable and inconsistent",
+        "Services are always free"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "Which of the following is an example of a business service?",
+      "answers": [
+        "Buying groceries",
+        "Banking services for a company",
+        "Personal haircuts",
+        "Eating at a restaurant"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "How do societies deal with scarcity?",
+      "answers": [
+        "Increasing supply or reducing demand",
+        "Ignoring scarcity",
+        "Producing infinite resources",
+        "Reducing choices available to consumers"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "Which of the following best describes opportunity cost?",
+      "answers": [
+        "The financial cost of a product",
+        "The next best alternative forgone when making a choice",
+        "The price of goods increasing over time",
+        "The total amount spent on basic needs"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "What is an example of a personal service?",
+      "answers": [
+        "A manufactured laptop",
+        "A haircut or babysitting",
+        "A grocery store selling food",
+        "Buying a book online"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "Why do businesses need to make choices?",
+      "answers": [
+        "Because resources are unlimited",
+        "To avoid scarcity problems",
+        "Due to limited resources and demand fluctuations",
+        "To create unnecessary competition"
+      ],
+      "correct_answer": 2
+    }
+  ]
+}

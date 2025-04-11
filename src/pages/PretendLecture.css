@@ -8,7 +8,6 @@
   align-items: center;
   gap: 10px; /* Optional: spacing between text and button */
   width: fit-content;
-  list-style: circle!important;
 }
 
 .lecture-item p {
@@ -19,14 +18,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2.5rem;     /* Adjust to match text height */
-  width: 2.5rem;
+  height: 2rem;     /* Adjust to match text height */
+  width: 2rem;
   border-radius: 0.5rem;
   padding: 0;
   margin: 0;
 }
 
 .play-button svg {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }

@@ -6,7 +6,7 @@ function ChooseQuizItem({ title, image, path, desc }) {
   return (
     <li className="quiz-item">
       <h3>{title}</h3>
-      <img src={image} alt="note icon" height={220} />
+      <img src={image} alt="note icon" height={220} className="icon" />
       <Link to={path}>
         <button>
           <img src="/images/star-white.svg" alt="star icon" />

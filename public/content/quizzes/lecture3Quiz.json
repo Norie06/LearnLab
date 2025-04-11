@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "question": "What is the main focus of Piaget’s theory of cognitive development?",
+      "answers": [
+        "How children develop personality",
+        "How children construct knowledge through experiences",
+        "The influence of genetics on intelligence",
+        "How language development occurs"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "Which stage of cognitive development occurs from birth to 2 years old?",
+      "answers": [
+        "Sensorimotor",
+        "Preoperational",
+        "Concrete Operational",
+        "Formal Operational"
+      ],
+      "correct_answer": 0
+    },
+    {
+      "question": "Which concept describes a child understanding that an object still exists even when not seen?",
+      "answers": [
+        "Centration",
+        "Object permanence",
+        "Accommodation",
+        "Egocentrism"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "In which stage do children start using pretend play and symbolic thinking?",
+      "answers": [
+        "Sensorimotor",
+        "Preoperational",
+        "Concrete Operational",
+        "Formal Operational"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "A child believes that everyone sees the world the same way they do. This is an example of:",
+      "answers": [
+        "Conservation",
+        "Reversibility",
+        "Decentering",
+        "Egocentrism"
+      ],
+      "correct_answer": 3
+    },
+    {
+      "question": "Which stage involves the ability to think logically about concrete events but struggles with abstract ideas?",
+      "answers": [
+        "Preoperational",
+        "Sensorimotor",
+        "Concrete Operational",
+        "Formal Operational"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "What is the ability to mentally reverse an action called?",
+      "answers": [
+        "Conservation",
+        "Reversibility",
+        "Assimilation",
+        "Accommodation"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "What is a key feature of the formal operational stage?",
+      "answers": [
+        "Use of logic in problem-solving",
+        "Understanding object permanence",
+        "Hypothetical-deductive reasoning",
+        "Learning through trial and error"
+      ],
+      "correct_answer": 2
+    },
+    {
+      "question": "According to Piaget, learning occurs when children adjust existing schemas. This is called:",
+      "answers": [
+        "Assimilation",
+        "Accommodation",
+        "Conservation",
+        "Decentering"
+      ],
+      "correct_answer": 1
+    },
+    {
+      "question": "Piaget’s theory suggests that children learn through:",
+      "answers": [
+        "Passive absorption of knowledge",
+        "Active exploration and experiences",
+        "Imitating adults only",
+        "Genetic programming"
+      ],
+      "correct_answer": 1
+    }
+  ]
+}
