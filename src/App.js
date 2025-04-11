@@ -103,7 +103,7 @@ function App() {
           <Route path="/tests/note-taking/results" element={<NoteTakingResults />}/>
           <Route path="/tests/pretend-lecture" element={<PretendLecture />}/>
           <Route path="/tests/pretend-lecture/:videoId/video" element={<LectureVideo />} />
-          <Route path="/tests/pretend-lecture/:videoId/quiz" element={<LectureQuiz />} />
+          <Route path="/tests/pretend-lecture/:videoId/test" element={<LectureQuiz />} />
           <Route path="/tests/pretend-lecture/:videoId/results" element={<LectureResults />} />
           <Route path="/tests/pretend-lecture/final-results" element={<LectureFinalResults />} />
         </Routes>

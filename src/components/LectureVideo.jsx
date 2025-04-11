@@ -18,7 +18,7 @@ function LectureVideo() {
   };
 
   const handleContinue = () => {
-    navigate(`/tests/pretend-lecture/${videoId}/quiz`);
+    navigate(`/tests/pretend-lecture/${videoId}/test`);
   };
 
   const handleSlidesClick = () => {
