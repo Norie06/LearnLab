@@ -17,12 +17,16 @@
 
 .thirty-percent {
   width: 30%;
-  padding: 5px;
-  margin: 10px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  padding: 20px 5px 20px 20px;
   height: auto; /* Adjust height to fit content */
-  align-self: flex-start;
+  align-self: stretch;
   list-style: none; /* Remove default bullet points */
   position: relative; /* Required for positioning the ::before element */
+  /* background-color: white; */
+  border-radius: 55px; /* Add rounded corners */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Add a subtle shadow */
 }
 
 .thirty-percent::before {
@@ -35,6 +39,7 @@
   left: 0; /* Align the bullet to the left */
   top: 0; /* Align the bullet with the top of the title */
   transform: translateY(4px); /* Fine-tune vertical alignment */
+  padding: 15px 0px 0px 15px; /* Add padding to the top for the bullet */
 }
 
 /*.thirty-percent::marker {

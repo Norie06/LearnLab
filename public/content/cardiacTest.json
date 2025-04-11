@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "question": "What is arteriosclerosis?",
+      "answers": [
+        "A condition where arteries thicken and lose flexibility",
+        "A disease that only affects the brain",
+        "A temporary blockage of blood flow",
+        "A heart valve disorder"
+      ],
+      "correct_answer": "A condition where arteries thicken and lose flexibility"
+    },
+    {
+      "question": "Which condition occurs when plaque builds up in the arteries, leading to narrowing?",
+      "answers": [
+        "Arteriosclerosis",
+        "Atherosclerosis",
+        "Angina",
+        "Pericarditis"
+      ],
+      "correct_answer": "Atherosclerosis"
+    },
+    {
+      "question": "Which of the following is NOT a risk factor for heart disease?",
+      "answers": [
+        "Smoking",
+        "High cholesterol",
+        "Low blood pressure",
+        "Diabetes"
+      ],
+      "correct_answer": "Low blood pressure"
+    },
+    {
+      "question": "What is the most serious complication of angina?",
+      "answers": [
+        "High blood pressure",
+        "Stroke",
+        "Heart attack",
+        "Coronary bypass"
+      ],
+      "correct_answer": "Heart attack"
+    },
+    {
+      "question": "Which diagnostic test is used to visualize blocked arteries?",
+      "answers": [
+        "Echocardiogram",
+        "Coronary angiography",
+        "Stress test",
+        "Electrocardiogram"
+      ],
+      "correct_answer": "Coronary angiography"
+    },
+    {
+      "question": "Which treatment involves rerouting blood flow around a blocked artery?",
+      "answers": [
+        "Coronary artery bypass graft (CABG)",
+        "Angioplasty",
+        "Pacemaker insertion",
+        "Stent placement"
+      ],
+      "correct_answer": "Coronary artery bypass graft (CABG)"
+    },
+    {
+      "question": "What symptom is most commonly associated with angina?",
+      "answers": [
+        "Sudden memory loss",
+        "Chest pain or discomfort",
+        "Leg swelling",
+        "Chronic cough"
+      ],
+      "correct_answer": "Chest pain or discomfort"
+    },
+    {
+      "question": "Which lifestyle change can reduce heart disease risk?",
+      "answers": [
+        "Eating processed foods",
+        "Reducing physical activity",
+        "Managing stress and quitting smoking",
+        "Increasing sodium intake"
+      ],
+      "correct_answer": "Managing stress and quitting smoking"
+    },
+    {
+      "question": "What is a common diagnostic test for heart disease?",
+      "answers": [
+        "MRI scan",
+        "Blood test (troponin levels)",
+        "Liver function test",
+        "Vision test"
+      ],
+      "correct_answer": "Blood test (troponin levels)"
+    },
+    {
+      "question": "Atherosclerosis can lead to all of the following EXCEPT:",
+      "answers": [
+        "Stroke",
+        "Heart attack",
+        "Hypertension",
+        "Diabetes"
+      ],
+      "correct_answer": "Diabetes"
+    }
+  ]
+}

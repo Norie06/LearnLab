@@ -8,6 +8,7 @@ function LectureVideo() {
   const navigate = useNavigate();
   const { videoId } = useParams();
   const [hasWatchedVideo, setHasWatchedVideo] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
   const handleVideoComplete = () => {
     setHasWatchedVideo(true);
@@ -16,6 +17,10 @@ function LectureVideo() {
   const handleContinue = () => {
     navigate(`/pretend-lecture/quiz/${videoId}`);
   };
+
+  const handleShowVideo = () => {
+    setShowVideo(true);
+  }
 
   const videoIds = {
     '1': 'b_H0V1-kQbE', // Preview slides before lecture
@@ -43,22 +48,28 @@ function LectureVideo() {
         return (
           <>
             <p><b>First, your task is to read the slides before watching the presentation.</b></p>
-            <button className="slides-button">
+            <button className="slides-button" onClick={handleShowVideo}>
               <a href={`https://drive.google.com/file/d/13ut-2mQhXyEReIhTPrVrc8fUrjsAK7o7/view`} target="_blank" rel="noopener noreferrer">
                 <img src="/images/star-white.svg" alt="star icon" />
                 Slides
                 <img src="/images/star-white.svg" alt="star icon" />
               </a>
             </button>
-            <p><b>Next, watch the video lecture. Try to remember as much information as you can. </b></p>
-            <p>! You can only proceed when you have watched the video <b>all the way</b> through</p>
-            <div className="video-container">
-              <YouTube
-                videoId={videoIds[videoId]}
-                opts={opts}
-                onEnd={handleVideoComplete}
-              />
-            </div>
+            {showVideo ? (
+              <div>
+                <p><b>Next, watch the video lecture. Try to remember as much information as you can. </b></p>
+                <div className="video-container">
+                  <YouTube
+                    videoId={videoIds[videoId]}
+                    opts={opts}
+                    onEnd={handleVideoComplete}
+                  />
+                </div>
+                <p style={{justifySelf: 'center'}}>-- You can only proceed when you have watched the video <b>all the way</b> through. --</p>
+              </div>
+            ) : (
+              <p style={{justifySelf: 'center'}}>-- View the slides to see the video --</p>
+            )}
           </>
         );
       

@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+// import "../App.css";
 import "../App.css";
 import "./PretendLecture.css";
 
@@ -30,10 +31,10 @@ function PretendLecture() {
             Do you know whether you learn better when you preview the slides before your lecture? Or, on the other hand, does it distract you? Test it yourself here:
           </p>
           <p>Which one would you like to try first?</p>
-          <ol className="lecture-list">
+          <ul className="lecture-list">
             {lectureOptions.map((lecture) => (
               <li key={lecture.id} className="lecture-item">
-                <span>{lecture.title}</span>
+                <p>{lecture.title}</p>
                 <button 
                   className="play-button"
                   onClick={() => handleLectureSelect(lecture.id)}
@@ -43,7 +44,7 @@ function PretendLecture() {
                 </button>
               </li>
             ))}
-          </ol>
+          </ul>
         </div>
       </main>
     </div>
