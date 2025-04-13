@@ -11,7 +11,7 @@ html, body {
   width: 100%;
   height: 100%; /* Ensure the body takes the full height of the viewport */
   overflow-x: hidden; /* Prevent horizontal overflow */
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 /* ## Styling the App itself */
@@ -56,7 +56,7 @@ nav {
   left: 0;
   width: 100%;
   background: linear-gradient(to bottom, rgba(197,223,226,255), aliceblue, rgba(197,223,226,255)); /* Gradient with white center */
-  padding: 15px 15px;
+  padding: 18px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -204,11 +204,12 @@ nav ul li:hover {
 ::-webkit-scrollbar {
   position: absolute;
   width: 9px; /* Width of the scrollbar */
+  z-index: 9999; /* Ensure it appears above all other content */
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(156, 210, 216, 0.993); /* Background of the scrollbar track */
-  margin-top: 70px;
+  background: rgba(225, 241, 244, 0.996); /* Background of the scrollbar track */
+  margin-top: 60px;
 }
 
 ::-webkit-scrollbar-corner {
@@ -216,7 +217,7 @@ nav ul li:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(225, 241, 244, 0.996); /* Color of the scrollbar thumb */
+  background: rgba(156, 210, 216, 0.993); /* Color of the scrollbar thumb */
   border-radius: 9px; /* Rounded corners for the scrollbar thumb */
 }
 
@@ -260,7 +261,7 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
-  padding-top: 110px;
+  padding-top: 140px;
   padding-bottom: 30px;
 }
 
@@ -298,9 +299,8 @@ footer {
   padding: 2%; /* Remove padding */
   font-size: 0.8em;
   text-align: center;
-  margin-top: 5px;
   background-color: whitesmoke;
-  border-radius: 20px;
+  border-radius: 50px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
   width: 50%;
 }

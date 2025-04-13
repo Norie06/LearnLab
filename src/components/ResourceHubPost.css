@@ -1,13 +1,14 @@
 .resource-hub-post {
   margin-top: 70px;
-  width: 55%;
-  padding: 4%;
+  width: 60%;
+  padding: 2.5% 5%;
   background: radial-gradient(circle, rgba(20, 90, 100, 0.5) 0%, rgba(50, 120, 130, 0.85) 100%);
   color: whitesmoke;
-  border-radius: 70px;
+  border-radius: 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-size: 0.95em;
+  font-size: 0.85em;
+  position: relative; /* Add this */
 }
 
 .resource-hub-post.in-view {
@@ -22,19 +23,30 @@
 
 .resource-hub-post h1 {
   font-size: 2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
   text-align: center;
   margin-top: 0;
+  color: whitesmoke;
 }
 
 .resource-hub-post h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
+  font-size: 1.4em;
+  margin-top: 1.2em;
+  color: whitesmoke;
+}
+
+.resource-hub-post p {
+  color: whitesmoke;
 }
 
 .resource-hub-post ul {
   list-style-type: disc;
   margin-left: 20px;
+}
+
+.resource-hub-post ul li {
+  list-style-type: disc;
+  margin-top: 10px;
 }
 
 .resource-hub-post ol {
@@ -48,4 +60,21 @@
 
 .resource-hub-post em {
   font-style: italic;
+}
+
+[id^="section-"] {
+  scroll-margin-top: 120px; /* Increased margin to account for header */
+  display: block; /* Ensure the container is block-level */
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Add specific styling for when accessed via URL hash */
+:target {
+  animation: highlight 2s ease;
+}
+
+@keyframes highlight {
+  from { background-color: rgba(255, 255, 255, 0.2); }
+  to { background-color: transparent; }
 }

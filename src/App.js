@@ -3,18 +3,19 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
-import Community from './pages/Community';
-import Profile from './pages/Profile';
+// import Community from './pages/Community';
+// import Profile from './pages/Profile';
 import Tests from './pages/Tests';
 import ResourceHub from './pages/ResourceHub';
-import SignUp from './pages/SignUp';
-import SignIn from './pages/SignIn';
+// import SignUp from './pages/SignUp';
+// import SignIn from './pages/SignIn';
 import LearningStyles from './pages/LearningStylesQuiz';
 import LearningStylesResults from './pages/LearningStylesResults';
 import NoteTaking from './pages/NoteTaking';
 import NoteTakingResults from './pages/NoteTakingResults';
 import PretendLecture from './pages/PretendLecture';
 import ResourceHubSubpage from './pages/ResourceHubSubpage';
+import NotAvailable from './pages/NotAvailable';
 import LectureVideo from './components/LectureVideo';
 import LectureQuiz from './components/LectureQuiz';
 import LectureResults from './components/LectureResults';
@@ -26,6 +27,14 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 function App() {
   const [isLoading, setIsLoading] = useState(true); 
   const location = useLocation(); // Get the current route
+
+  // Add this helper function at the top of your component
+  const isActiveRoute = (path) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -49,54 +58,54 @@ function App() {
 
   return (
     <div id="App">
+      <ScrollToTop />
       <nav>
         <ul className='placeholder' id='placeholder_1'></ul>
         <ul id='main_pages'>
-          <li className={location.pathname === '/' ? 'active-link' : ''}>
+          <li className={isActiveRoute('/') ? 'active-link' : ''}>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li className={location.pathname === '/tests' ? 'active-link' : ''}>
+          <li className={isActiveRoute('/tests') ? 'active-link' : ''}>
             <NavLink to="/tests">Tests</NavLink>
           </li>
-          <li className={location.pathname === '/resource-hub' ? 'active-link' : ''}>
+          <li className={isActiveRoute('/resource-hub') ? 'active-link' : ''}>
             <NavLink to="/resource-hub">Resource Hub</NavLink>
           </li>
-          <li className={location.pathname === '/community' ? 'active-link' : ''}>
+          <li className={isActiveRoute('/community') ? 'active-link' : ''}>
             <NavLink to="/community">Community</NavLink>
           </li>
-          <li className={location.pathname === '/about' ? 'active-link' : ''}>
+          <li className={isActiveRoute('/about') ? 'active-link' : ''}>
             <NavLink to="/about">About</NavLink>
           </li>
         </ul>
         <ul>
           <li className='placeholder' id='placeholder_2'></li>
-          <li className={location.pathname === '/log-in' ? 'active-link' : ''}>
+          <li className={isActiveRoute('/log-in') ? 'active-link' : ''}>
             <NavLink to="/log-in">Log In</NavLink>
           </li>
-          <li className={location.pathname === '/sign-up' ? 'active-link' : ''}>
+          <li className={isActiveRoute('/sign-up') ? 'active-link' : ''}>
             <NavLink to="/sign-up">Sign Up</NavLink>
           </li>
-          <li className={location.pathname === '/profile' ? 'active-link' : ''}>
+          <li className={isActiveRoute('/profile') ? 'active-link' : ''}>
             <NavLink to="/profile">Profile</NavLink>
           </li>
         </ul>
       </nav>
       <main className="page">
-        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/community" element={<NotAvailable />} />
+          <Route path="/profile" element={<NotAvailable />} />
           <Route path="/tests" element={<Tests />} />
           <Route path="/resource-hub" element={<ResourceHub />} />
-          <Route path="/resource-hub/advanced-cog-concepts" element={<ResourceHubSubpage title="Advanced Cognitive Concepts" folderPath="../content/resource-hub/advanced-cog-concepts" />} />
-          <Route path="/resource-hub/learning-styles" element={<ResourceHubSubpage title="Learning Styles" folderPath="../content/resource-hub/learning-styles" />} />
-          <Route path="/resource-hub/core-cog-learning" element={<ResourceHubSubpage title="Core Cognitive Learning Concepts" folderPath="../content/resource-hub/core-cognitive-learning-concepts" />} />
-          <Route path="/resource-hub/note-taking-styles" element={<ResourceHubSubpage title="Note-Taking Styles" folderPath="../content/resource-hub/note-taking-styles" />} />
-          <Route path="/resource-hub/useful-tools" element={<ResourceHubSubpage title="More Useful Interactive Tools" folderPath="../content/resource-hub/more-tools" />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/log-in" element={<SignIn />} />
+          <Route path="/resource-hub/advanced-cog-concepts" element={<ResourceHubSubpage title="Advanced Cognitive Concepts" folderPath="../content/resource-hub/advanced-cog-concepts" css="adv" />} />
+          <Route path="/resource-hub/learning-styles" element={<ResourceHubSubpage title="Learning Styles" folderPath="../content/resource-hub/learning-styles" css="learn" />} />
+          <Route path="/resource-hub/core-cog-learning" element={<ResourceHubSubpage title="Core Cognitive Learning Concepts" folderPath="../content/resource-hub/core-cognitive-learning-concepts" css="core" />} />
+          <Route path="/resource-hub/note-taking-styles" element={<ResourceHubSubpage title="Note-Taking Styles" folderPath="../content/resource-hub/note-taking-styles" css="note" />} />
+          <Route path="/resource-hub/useful-tools" element={<ResourceHubSubpage title="More Useful Interactive Tools" folderPath="../content/resource-hub/more-tools" css="tools" />} />
+          <Route path="/sign-up" element={<NotAvailable />} />
+          <Route path="/log-in" element={<NotAvailable />} />
           <Route path="/tests/learning-styles" element={<LearningStyles />}/>
           <Route path="/tests/learning-styles/results" element={<LearningStylesResults />}/>
           <Route path="/tests/note-taking" element={<NoteTaking />}/>

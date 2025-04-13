@@ -27,15 +27,15 @@ function LectureVideo() {
   };
 
   const videoIds = {
-    '1': 'b_H0V1-kQbE', // Preview slides before lecture
-    '2': 'uKxRYH1ZC5I',  // See slides after lecture
-    '3': 'VBifDZwPiI4'   // No slides access
+    '1': 'fJS-ccsKcxE', // Preview slides before lecture
+    '2': 'IpNw4osZtwQ',  // See slides after lecture
+    '3': '6Q2rXtBleuE'   // No slides access
   };
 
   const videoTitles = {
     '1': 'Cardiac Diseases',
-    '2': 'Basic Economics',
-    '3': 'World History Overview'
+    '2': 'Needs, Goods, Services, Scarcity, and Choice',
+    '3': 'Cognitive Development Stages'
   };
 
   const opts = {
@@ -144,7 +144,7 @@ function LectureVideo() {
   return (
     <div className="page" id='lecture-video'>
       <header className="hero">
-        <h1>Pretend Lecture {videoId}: {videoTitles[videoId]}</h1>
+        <h1>Lecture {videoId}: {videoTitles[videoId]}</h1>
       </header>
       <main>
         <div className="container">

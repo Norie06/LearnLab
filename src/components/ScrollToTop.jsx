@@ -6,9 +6,21 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    console.log(`Route changed to: ${pathname}`); // Log the current route
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }, [pathname]); // Trigger when the route changes
+    // Try multiple scroll methods for better compatibility
+    try {
+      // Method 1: Using scrollTo
+      window.scrollTo(0, 0);
+      
+      // Method 2: Using documentElement
+      document.documentElement.scrollTop = 0;
+      
+      // Method 3: Using body
+      document.body.scrollTop = 0;
+      
+    } catch (error) {
+      console.error('Failed to scroll:', error);
+    }
+  }, [pathname]);
 
   return null;
 }

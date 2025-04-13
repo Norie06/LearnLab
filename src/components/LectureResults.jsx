@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import './LectureResults.css';
 import '../App.css';
 
@@ -148,9 +149,11 @@ function LectureResults() {
             </ul>
           </>
         )}
-        <button>
-          <a href="/tests/pretend-lecture">Back to the Lectures</a>
-        </button>
+        <Link to={'/tests/pretend-lecture'}>
+          <button>
+            Back to the Lectures
+          </button>
+        </Link>
       </main>
     </div>
   );

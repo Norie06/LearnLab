@@ -7,9 +7,9 @@ function ResourceHubPost({ title, content }) {
   const [isInView, setIsInView] = useState(false); // State to track if the element is in view
 
   useEffect(() => {
+    const currentRef = postRef.current; // Store the current value
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Check if the element is near the center of the viewport
         setIsInView(entry.isIntersecting);
       },
       {
@@ -18,13 +18,13 @@ function ResourceHubPost({ title, content }) {
       }
     );
 
-    if (postRef.current) {
-      observer.observe(postRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (postRef.current) {
-        observer.unobserve(postRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -35,7 +35,17 @@ function ResourceHubPost({ title, content }) {
       className={`resource-hub-post ${isInView ? "in-view" : ""}`} // Add "in-view" class if the element is in view
     >
       <h3>{title}</h3>
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown
+        components={{
+          a: ({ node, children, ...props }) => (
+            <a {...props} target="_blank" rel="noopener noreferrer">
+              {children}
+            </a>
+          ),
+        }}
+      >
+        {content}
+      </ReactMarkdown>
     </div>
   );
 }

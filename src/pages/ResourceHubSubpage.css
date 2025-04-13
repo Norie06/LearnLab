@@ -1,0 +1,13 @@
+#resource_hub_subpage main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.tools a {
+  text-decoration: none;
+}

@@ -1,12 +1,16 @@
 {
   "features": [
     {
-      "title": "Learning Styles Quizzes",
+      "title": "Learning Styles Test",
       "description": "Helps students identify their preferred learning approaches and reflect on study habits. Grounded in cognitive science, it guides users toward research-backed strategies tailored to their strengths."
     },
     {
-      "title": "Note-taking Strategies Quiz",
+      "title": "Note-taking Strategies Test",
       "description": "Helps students assess their note-taking habits and discover effective, science-backed techniques. It encourages self-reflection and recommends strategies to enhance comprehension and retention."
+    },
+    {
+      "title": "Pretend Lecture Test",
+      "description": "Offers students the opportunity to assess how different lecture formats affect their understanding and retention. By experiencing various learning approaches, students can gain insights into their own study habits."
     },
     {
       "title": "Resource Hub",

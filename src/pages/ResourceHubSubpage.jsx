@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../App.css"; // Import the CSS file for global styles
 import ResourceHubPost from "../components/ResourceHubPost";
+import "./ResourceHubSubpage.css"; // Import the CSS file for this component
 
-function ResourceHubSubpage({ title, folderPath }) { // Correctly destructure props
+function ResourceHubSubpage({ title, folderPath, css }) { // Correctly destructure props
   const [markdownFiles, setMarkdownFiles] = useState([]);
 
   useEffect(() => {
@@ -23,7 +24,7 @@ function ResourceHubSubpage({ title, folderPath }) { // Correctly destructure pr
       <header className="hero">
         <h1>{title}</h1>
       </header>
-      <main>
+      <main className={`${css}`}>
         {markdownFiles.map((content, index) => ( // Add a key for each item
           <ResourceHubPost key={index} content={content} />
         ))}

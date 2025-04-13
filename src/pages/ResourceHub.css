@@ -12,6 +12,7 @@
     filter:hue-rotate(180deg);
 }
 
+
 .topic-card {
     display: flex;
     flex-direction: row;

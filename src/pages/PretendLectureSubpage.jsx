@@ -1,5 +1,5 @@
 
-function PretendLectureSubpage( heading, instructions, video) {
+function PretendLectureSubpage( heading, instructions) {
   return (
     <div>
       <h2>{heading}</h2>
