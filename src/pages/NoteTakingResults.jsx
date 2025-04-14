@@ -93,15 +93,15 @@ function NoteTakingResults() {
             ],
             backgroundColor: [
               "rgba(27, 99, 151, 0.8)", // Visual
+              "rgba(241, 124, 116, 0.8)", // Kinesthetic
               "rgba(108, 180, 98, 0.8)", // Auditory
               "rgba(205, 200, 50, 0.8)", // Reading
-              "rgba(241, 124, 116, 0.8)", // Kinesthetic
             ],
             borderColor: [
               "rgba(27, 99, 151, 1)", // Visual
+              "rgba(241, 124, 116, 1)", // Kinesthetic
               "rgba(108, 180, 98, 1)", // Auditory
               "rgba(205, 200, 50, 1)", // Reading
-              "rgba(241, 124, 116, 1)", // Kinesthetic
             ],
             borderWidth: 1,
           },
