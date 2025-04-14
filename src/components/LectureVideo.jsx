@@ -103,7 +103,7 @@ function LectureVideo() {
               <>
                 <p><b>Now you can review the slides from the presentation.</b></p>
                 <button className="slides-button" onClick={handleSlidesClick}>
-                  <a href={`https://drive.google.com/file/d/13ut-2mQhXyEReIhTPrVrc8fUrjsAK7o7/view`} target="_blank" rel="noopener noreferrer">
+                  <a href={`https://drive.google.com/file/d/17Q8qb-Dju6wR6yIKBh5kQMF_NNr9v_5k/view?usp=sharing`} target="_blank" rel="noopener noreferrer">
                     <img src="/images/star-white.svg" alt="star icon" />
                       Slides
                     <img src="/images/star-white.svg" alt="star icon" />
