@@ -1,13 +1,13 @@
-#signup {
+#signin {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    min-width: 400px;
+    width: 28%;
+    min-width: 300px;
     align-content: end;
     margin: 15px;
-    margin-top: 75px;
+    margin-top: 110px;
     padding: 20px 30px 20px 30px;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -17,34 +17,33 @@
     text-align: left;
 }
 
-.hide {
-    display: none;
-}
-
-.offscreen {
-    position: absolute;
-    left: -9999px;
-}
-
-form {
+#signin form {
     display: flex;
     flex-direction: column;
     width: 100%;
     border-top: 1px solid #00000081;
 }
 
-label {
+.input-line {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid #00000081;
+    height: 55px;
+    align-items: center;
+}
+
+.input-line label {
     display: flex;
     padding: 0px 10px 0px 0px;
     align-content: end;
     align-items: center;
     justify-content: right;
-    /*min-width: fit-content;*/
     width: 45%;
     text-align: right;
 }
 
-input {
+.input-line input {
     padding: 10px;
     border: none;
     background: none;
@@ -57,64 +56,63 @@ input {
     transition: 0.2s ease;
 }
 
-input:focus {
+.input-line input:focus {
     box-shadow: inset 0 0 10px 1px #0000003a;
     outline: none;
 }
 
-
-#signup h2 {
+#signin h2 {
     font-size: 2.5em;
     margin: 0;
     margin-bottom: 10px;
     padding: 0;
 }
 
-#signup button {
+#signin button {
     font-size: 1.6em;
     font-family: 'Kalam';
     width: 50%;
     align-self: center;
     padding: 4px;
     margin-top: 10px;
+    background-color: #2C2C2C;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
-#signup button:hover {
+#signin button:hover {
     background: #E3E3E3;
     border: 1px solid #767676;
     color: #2C2C2C;
     text-decoration: none;
 }
 
-.input-line {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    border-bottom: 1px solid #00000081;
-    width: 100%;
-    height: 55px;
-    align-items: center;
+.errmsg {
+    background-color: #ffebee;
+    color: firebrick;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
 }
 
-.instructions {
-    contain: content;
-    font-size: 0.6em;
-    width: 80%;
-    align-self: center;
-    font-family: 'Inter', sans-serif;
-
+.offscreen {
+    position: absolute;
+    left: -9999px;
 }
 
-.invalid, .valid {
-    padding: 0px 10px 0px 0px;
-}
-
-#have-account {
+#need-account {
     margin-top: 20px;
     font-family: 'Inter', sans-serif;
     font-size: 0.8em;
 }
 
-#pwdnote, #uidnote, #confirmnote {
-    padding-left: 10px;
+#need-account a {
+    color: #2C2C2C;
+    text-decoration: none;
+}
+
+#need-account a:hover {
+    text-decoration: underline;
 }

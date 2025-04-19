@@ -5,11 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from '../api/axios';
 import './SignUp.css';
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
-const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]){8,24}$/;
-const REGISTER_URL = '/signup'
-
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const REGISTER_URL = 'https://x8ki-letl-twmt.n7.xano.io/api:PMtYj7w6/auth/signup'; // Replace with your actual API endpoint
 
 function SignUp() {
     const userRef = useRef();
@@ -26,6 +27,10 @@ function SignUp() {
     const [matchPwd, setMatchPwd] = useState('');
     const [validMatch, setValidMatch] = useState(false);
     const [matchFocus, setMatchFocus] = useState(false);
+
+    const [email, setEmail] = useState('');
+    const [validEmail, setValidEmail] = useState(false);
+    const [emailFocus, setEmailFocus] = useState(false);
 
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
@@ -52,66 +57,55 @@ function SignUp() {
 
     useEffect(() => {
         setErrMsg('');
-    }, [user, pwd, matchPwd]); 
+    }, [user, pwd, matchPwd, email]); // Added email to dependencies
+
+    useEffect(() => {
+        const result = EMAIL_REGEX.test(email);
+        console.log('Email validation:', result, email); // Add this log
+        setValidEmail(result);
+    }, [email]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        //if button enabled with JS hack
+        
+        // Validate inputs
         const v1 = USER_REGEX.test(user);
         const v2 = PWD_REGEX.test(pwd);
-        if (!v1 || !v2) {
-            setErrMsg('Invalid input. Please check the fields above.');
-            return;
-        }
-        try {
-            const response = await axios.post(REGISTER_URL, JSON.stringify({ name: user, password: pwd }),
-            { 
-                headers: { 'Content-Type': 'application/json' },
-                withCredentials: true
-            }
-        );
-        console.log(response.data);
-        console.log(response.accessToken);
-        console.log(JSON.stringify(response));
-        setSuccess(true);
-        //clear input fields
-        
-    } catch (error) {
-        if (!error?.response) {
-            setErrMsg('No Server Response.');
-            return;
-        } else if (error.response?.status === 409) {
-            setErrMsg('Username already exists. Please choose another.');
-            return;
-        } else {
-            setErrMsg('Registration failed.');
-        }
-        errRef.current.focus();
-    }
-
-
-        /* if (!validName || !validPwd || !validMatch) {
+        const v3 = EMAIL_REGEX.test(email);
+        if (!v1 || !v2 || !v3) {
             setErrMsg('Invalid input. Please check the fields above.');
             return;
         }
 
         try {
-            const response = await fetch('http://localhost:3001/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ user, pwd }),
-            });
-            if (response.ok) {
-                setSuccess(true);
+            const response = await axios.post(REGISTER_URL, 
+                JSON.stringify({ 
+                    name: user,
+                    email: email, 
+                    password: pwd 
+                }),
+                {
+                    headers: { 'Content-Type': 'application/json' }
+                }
+            );
+
+            // If successful
+            console.log(response.data);
+            setSuccess(true);
+            setUser('');
+            setPwd('');
+            setMatchPwd('');
+
+        } catch (err) {
+            if (!err?.response) {
+                setErrMsg('No Server Response');
+            } else if (err.response?.status === 409) {
+                setErrMsg('Username already exists');
             } else {
-                const data = await response.json();
-                throw new Error(data.message);
+                setErrMsg('Registration Failed');
             }
-        } catch (error) {
-            setErrMsg(error.message);
-        } */
+            errRef.current.focus();
+        }
     };
 
     return (
@@ -120,7 +114,9 @@ function SignUp() {
                 <section>
                     <h1>Sign In</h1>
                     <p>
-                        <a href="/signin">Sign In</a> {/* Add link to sign in page */}
+                        <Link to="/log-in" className='link'>
+                            Sign In
+                        </Link>
                     </p>
                 </section>
             ) : (
@@ -138,7 +134,7 @@ function SignUp() {
                         <span className={validName || !user ? "hide" : "invalid"}>
                             <FontAwesomeIcon icon={faTimes} />
                         </span>
-                        Username:
+                        Display Name:
                     </label>
                     <input 
                         type="text" 
@@ -159,6 +155,34 @@ function SignUp() {
                         4 to 24 characters. <br />
                         Must start with a letter. <br />
                         Letters, numbers, hyphens, and underscores are allowed.
+                    </p>
+                </div>
+                <div className='input-line'>
+                    <label htmlFor="email">
+                        <span className={validEmail ? "valid" : "hide"}>
+                            <FontAwesomeIcon icon={faCheck} />
+                        </span>
+                        <span className={validEmail || !email ? "hide" : "invalid"}>
+                            <FontAwesomeIcon icon={faTimes} />
+                        </span>
+                        Email:
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email"
+                        autoComplete='off'
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        aria-invalid={!validEmail ? "false" : "true"}
+                        aria-describedby="emailnote"
+                        onFocus={() => setEmailFocus(true)}
+                        onBlur={() => setEmailFocus(false)}
+                    />
+                </div>
+                <div className='input-line'>
+                    <p id='emailnote' className={emailFocus && email && !validEmail ? "instructions" : "offscreen"}>
+                        <FontAwesomeIcon icon={faInfoCircle} style={{paddingRight: "1%"}} />
+                        Must be a valid email address.
                     </p>
                 </div>
                 <div className='input-line'>
@@ -225,12 +249,12 @@ function SignUp() {
                         Must match the password above.
                     </p>
                 </div>
-                <button disabled={!validName || !validPwd || !validMatch ? true : false}>
+                <button disabled={!validName || !validPwd || !validMatch || !validEmail}>
                     Sign Up
                 </button>
             </form>
             <p id='have-account'>
-                Already have an account? <a href="/log-in">Log In</a> {/* Add link to sign in page */}
+                Already have an account? <Link to={"/log-in"}>Log In</Link> {/* Add link to sign in page */}
             </p>
         </section>
         )}

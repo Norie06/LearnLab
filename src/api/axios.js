@@ -1,5 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default axios.create({
-    baseURL: "https://x8ki-letl-twmt.n7.xano.io/api:tPsOFJgX",
+    baseURL: 'https://x8ki-letl-twmt.n7.xano.io/api:PMtYj7w6',
+    headers: {
+        'Content-Type': 'application/json'
+    }
 });
